@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A16AA78-2698-46D4-A11C-457F670C4140}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Carparking</RootNamespace>
+    <AssemblyName>Carparking</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attendant.cs" />
+    <Compile Include="AttendantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendantForm.Designer.cs">
+      <DependentUpon>AttendantForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlePayment.cs" />
+    <Compile Include="ManaAttend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManaAttend.Designer.cs">
+      <DependentUpon>ManaAttend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManaCarParking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManaCarParking.Designer.cs">
+      <DependentUpon>ManaCarParking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageParkingSpace.cs" />
+    <Compile Include="Manager.cs" />
+    <Compile Include="ManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParkCar.cs" />
+    <Compile Include="ParkingSpace.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\qlyparking.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qlyparking.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="qlyattendant.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qlyattendant.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="qlycarparking.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qlycarparking.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="qlycustomer.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qlycustomer.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="qlymanager.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qlymanager.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="qlyuserlogin.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qlyuserlogin.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="RetrieveCar.cs" />
+    <Compile Include="UserDataDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet81.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet81.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ViewReport.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManaAttend.resx">
+      <DependentUpon>ManaAttend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManaCarParking.resx">
+      <DependentUpon>ManaCarParking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\qlyparking.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>qlyparking.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\qlyparking.dbml.layout">
+      <DependentUpon>qlyparking.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="qlyattendant.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>qlyattendant.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qlyattendant.dbml.layout">
+      <DependentUpon>qlyattendant.dbml</DependentUpon>
+    </None>
+    <None Include="qlycarparking.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>qlycarparking.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qlycarparking.dbml.layout">
+      <DependentUpon>qlycarparking.dbml</DependentUpon>
+    </None>
+    <None Include="qlycustomer.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>qlycustomer.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qlycustomer.dbml.layout">
+      <DependentUpon>qlycustomer.dbml</DependentUpon>
+    </None>
+    <None Include="qlymanager.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>qlymanager.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qlymanager.dbml.layout">
+      <DependentUpon>qlymanager.dbml</DependentUpon>
+    </None>
+    <None Include="qlyuserlogin.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>qlyuserlogin.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qlyuserlogin.dbml.layout">
+      <DependentUpon>qlyuserlogin.dbml</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet1.xsc">
+      <DependentUpon>UserDataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet1.xss">
+      <DependentUpon>UserDataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet11.xsc">
+      <DependentUpon>UserDataDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet11.xss">
+      <DependentUpon>UserDataDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet2.xsc">
+      <DependentUpon>UserDataDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet2.xss">
+      <DependentUpon>UserDataDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet3.xsc">
+      <DependentUpon>UserDataDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet3.xss">
+      <DependentUpon>UserDataDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet4.xsc">
+      <DependentUpon>UserDataDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet4.xss">
+      <DependentUpon>UserDataDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet5.xsc">
+      <DependentUpon>UserDataDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet5.xss">
+      <DependentUpon>UserDataDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet6.xsc">
+      <DependentUpon>UserDataDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet6.xss">
+      <DependentUpon>UserDataDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet7.xsc">
+      <DependentUpon>UserDataDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet7.xss">
+      <DependentUpon>UserDataDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet81.xsc">
+      <DependentUpon>UserDataDataSet81.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet81.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet81.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet81.xss">
+      <DependentUpon>UserDataDataSet81.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Picture\shutterstock_540175210-BW.jpg" />
+    <Content Include="Properties\Picture\shutterstock_540175210-BW.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

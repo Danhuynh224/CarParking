@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="qlymanager">
+  <DataContextMoniker Name="/qlymanagerDataContext" />
+  <nestedChildShapes>
+    <classShape Id="292045f4-33d1-4cc4-ae1b-8ca3cbb59eb1" absoluteBounds="5.25, 3, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/qlymanagerDataContext/ManagerDb" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6567876b-20f6-4320-9377-e2956c171794" absoluteBounds="5.265, 3.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
