@@ -2,10 +2,10 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="qlyuserlogin">
   <DataContextMoniker Name="/qlyuserloginDataContext" />
   <nestedChildShapes>
-    <classShape Id="1f6017f9-6e97-44c4-8097-804b83e6f5a7" absoluteBounds="2.5, 1.25, 2, 2.1554996744791666">
+    <classShape Id="d6db9b45-de0c-482a-ae36-a86907940421" absoluteBounds="2.75, 1.375, 2, 2.1554996744791666">
       <DataClassMoniker Name="/qlyuserloginDataContext/UserLogin" />
       <nestedChildShapes>
-        <elementListCompartment Id="0acdbebf-ea4b-44de-94aa-59cf1d369d57" absoluteBounds="2.5149999999999997, 1.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="e9b4c396-f441-4d32-9fed-560d70248a71" absoluteBounds="2.765, 1.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

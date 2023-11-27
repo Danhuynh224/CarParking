@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UserData" Class="qlymanagerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DANHUYNH\SQLEXPRESS;Initial Catalog=UserData;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False" SettingsObjectName="Carparking.Properties.Settings" SettingsPropertyName="UserDataConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-GNKOG39\SQLEXPRESS;Initial Catalog=UserData;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False" SettingsObjectName="Carparking.Properties.Settings" SettingsPropertyName="UserDataConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ManagerDb" Member="ManagerDbs">
     <Type Name="ManagerDb">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

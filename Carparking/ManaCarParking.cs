@@ -21,8 +21,9 @@ namespace Carparking
 
         private void ManaCarParking_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'userDataDataSet10.ParkingSpaceDb' table. You can move, or remove it, as needed.
+            this.parkingSpaceDbTableAdapter1.Fill(this.userDataDataSet10.ParkingSpaceDb);
             // TODO: This line of code loads data into the 'userDataDataSet8.ParkingSpaceDb' table. You can move, or remove it, as needed.
-            this.parkingSpaceDbTableAdapter.Fill(this.userDataDataSet8.ParkingSpaceDb);
             space =new ParkingSpaceDb();
             db = new qlycarparkingDataContext();
             var list = (from s in db.ParkingSpaceDbs select s).ToList();

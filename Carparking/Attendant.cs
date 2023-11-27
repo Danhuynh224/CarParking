@@ -10,16 +10,23 @@ namespace Carparking
     {
         private string areaPark;
         private float salary;
+        private int workingDay;
         public Attendant(int id, string numerphone, string name, DateTime birthday, string role
-            ,string areaPark, float salary ) : base(id, numerphone, name, birthday, role)
+            ,string areaPark, int workingDay,  float salary ) : base(id, numerphone, name, birthday, role)
         {
             this.areaPark = areaPark;
             this.salary = salary;    
+            this.workingDay = workingDay;
         }
 
         public string AreaPark { get => areaPark; set => areaPark = value; }
         public float Salary { get => salary; set => salary = value; }
+        public int WorkingDay { get => workingDay; set => workingDay = value; }
 
+        public void ParkCar()
+        {
+
+        }
         public override string PrinfDetail()
         {
             return base.PrinfDetail() + "\nAreaPark: " + areaPark + "\nSalary: " +salary;

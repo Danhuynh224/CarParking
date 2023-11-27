@@ -68,6 +68,7 @@ namespace Carparking
                         }
                         else if (attendant_radioButton.Checked)
                         {
+                            //Attendant attendant = new Attendant(i.ID, i.NumberPhone, i.Fullname, i.Birthday.Value, i.Role);
                             this.Hide();
                             AttendantForm attendantForm = new AttendantForm();
                             attendantForm.ShowDialog();

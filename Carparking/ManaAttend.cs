@@ -24,8 +24,10 @@ namespace Carparking
 
         private void ManaAttend_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'userDataDataSet9.AttendantDb' table. You can move, or remove it, as needed.
+            this.attendantDbTableAdapter4.Fill(this.userDataDataSet9.AttendantDb);
             // TODO: This line of code loads data into the 'userDataDataSet7.AttendantDb' table. You can move, or remove it, as needed.
-            this.attendantDbTableAdapter3.Fill(this.userDataDataSet7.AttendantDb);
+
             attendant =new AttendantDb();
             atdb = new qlyattendantDataContext();
             var list = (from s in atdb.AttendantDbs select s).ToList(); 

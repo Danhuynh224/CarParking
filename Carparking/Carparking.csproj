@@ -54,6 +54,18 @@
     <Compile Include="AttendantForm.Designer.cs">
       <DependentUpon>AttendantForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AttParkCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttParkCar.Designer.cs">
+      <DependentUpon>AttParkCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CusBookTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CusBookTicket.Designer.cs">
+      <DependentUpon>CusBookTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerForm.cs">
       <SubType>Form</SubType>
@@ -124,52 +136,29 @@
       <DependentUpon>qlyuserlogin.dbml</DependentUpon>
     </Compile>
     <Compile Include="RetrieveCar.cs" />
-    <Compile Include="UserDataDataSet1.Designer.cs">
+    <Compile Include="UserDataDataSet10.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>UserDataDataSet1.xsd</DependentUpon>
+      <DependentUpon>UserDataDataSet10.xsd</DependentUpon>
     </Compile>
-    <Compile Include="UserDataDataSet11.Designer.cs">
+    <Compile Include="UserDataDataSet9.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>UserDataDataSet11.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="UserDataDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserDataDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="UserDataDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserDataDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="UserDataDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserDataDataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="UserDataDataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserDataDataSet5.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="UserDataDataSet6.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserDataDataSet6.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="UserDataDataSet7.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserDataDataSet7.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="UserDataDataSet81.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserDataDataSet81.xsd</DependentUpon>
+      <DependentUpon>UserDataDataSet9.xsd</DependentUpon>
     </Compile>
     <Compile Include="ViewReport.cs" />
+    <EmbeddedResource Include="AttendantForm.resx">
+      <DependentUpon>AttendantForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttParkCar.resx">
+      <DependentUpon>AttParkCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CusBookTicket.resx">
+      <DependentUpon>CusBookTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,104 +239,27 @@
     <None Include="qlyuserlogin.dbml.layout">
       <DependentUpon>qlyuserlogin.dbml</DependentUpon>
     </None>
-    <None Include="UserDataDataSet1.xsc">
-      <DependentUpon>UserDataDataSet1.xsd</DependentUpon>
+    <None Include="UserDataDataSet10.xsc">
+      <DependentUpon>UserDataDataSet10.xsd</DependentUpon>
     </None>
-    <None Include="UserDataDataSet1.xsd">
+    <None Include="UserDataDataSet10.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>UserDataDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>UserDataDataSet10.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="UserDataDataSet1.xss">
-      <DependentUpon>UserDataDataSet1.xsd</DependentUpon>
+    <None Include="UserDataDataSet10.xss">
+      <DependentUpon>UserDataDataSet10.xsd</DependentUpon>
     </None>
-    <None Include="UserDataDataSet11.xsc">
-      <DependentUpon>UserDataDataSet11.xsd</DependentUpon>
+    <None Include="UserDataDataSet9.xsc">
+      <DependentUpon>UserDataDataSet9.xsd</DependentUpon>
     </None>
-    <None Include="UserDataDataSet11.xsd">
+    <None Include="UserDataDataSet9.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>UserDataDataSet11.Designer.cs</LastGenOutput>
+      <LastGenOutput>UserDataDataSet9.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="UserDataDataSet11.xss">
-      <DependentUpon>UserDataDataSet11.xsd</DependentUpon>
-    </None>
-    <None Include="UserDataDataSet2.xsc">
-      <DependentUpon>UserDataDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="UserDataDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>UserDataDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UserDataDataSet2.xss">
-      <DependentUpon>UserDataDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="UserDataDataSet3.xsc">
-      <DependentUpon>UserDataDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="UserDataDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>UserDataDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UserDataDataSet3.xss">
-      <DependentUpon>UserDataDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="UserDataDataSet4.xsc">
-      <DependentUpon>UserDataDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="UserDataDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>UserDataDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UserDataDataSet4.xss">
-      <DependentUpon>UserDataDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="UserDataDataSet5.xsc">
-      <DependentUpon>UserDataDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="UserDataDataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>UserDataDataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UserDataDataSet5.xss">
-      <DependentUpon>UserDataDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="UserDataDataSet6.xsc">
-      <DependentUpon>UserDataDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="UserDataDataSet6.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>UserDataDataSet6.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UserDataDataSet6.xss">
-      <DependentUpon>UserDataDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="UserDataDataSet7.xsc">
-      <DependentUpon>UserDataDataSet7.xsd</DependentUpon>
-    </None>
-    <None Include="UserDataDataSet7.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>UserDataDataSet7.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UserDataDataSet7.xss">
-      <DependentUpon>UserDataDataSet7.xsd</DependentUpon>
-    </None>
-    <None Include="UserDataDataSet81.xsc">
-      <DependentUpon>UserDataDataSet81.xsd</DependentUpon>
-    </None>
-    <None Include="UserDataDataSet81.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>UserDataDataSet81.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UserDataDataSet81.xss">
-      <DependentUpon>UserDataDataSet81.xsd</DependentUpon>
+    <None Include="UserDataDataSet9.xss">
+      <DependentUpon>UserDataDataSet9.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
