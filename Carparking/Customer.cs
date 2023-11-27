@@ -13,8 +13,8 @@ namespace Carparking
         private float paid;
         private string payMethod;
 
-        public Customer(int id, string numerphone, string name, DateTime birthday, string role, 
-            int carID, int carRetrieve, float paid, string payMethod) : base(id, numerphone, name, birthday, role)
+        public Customer(int id, string name, string numerphone, DateTime birthday, string role, 
+            int carID, int carRetrieve, float paid, string payMethod): base(id, name, numerphone, birthday, role)
         {
             this.carID = carID;
             this.carRetrieve = carRetrieve;

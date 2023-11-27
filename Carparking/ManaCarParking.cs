@@ -14,15 +14,19 @@ namespace Carparking
     {
         ParkingSpaceDb space;
         qlycarparkingDataContext db;
-        public ManaCarParking()
+        Manager manager;
+        public ManaCarParking(Manager manager)
         {
+            this.manager = manager;
             InitializeComponent();
         }
 
         private void ManaCarParking_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'userDataDataSet1.ParkingSpaceDb' table. You can move, or remove it, as needed.
+            this.parkingSpaceDbTableAdapter.Fill(this.userDataDataSet1.ParkingSpaceDb);
             // TODO: This line of code loads data into the 'userDataDataSet10.ParkingSpaceDb' table. You can move, or remove it, as needed.
-            this.parkingSpaceDbTableAdapter1.Fill(this.userDataDataSet10.ParkingSpaceDb);
+            //this.parkingSpaceDbTableAdapter1.Fill(this.userDataDataSet10.ParkingSpaceDb);
             // TODO: This line of code loads data into the 'userDataDataSet8.ParkingSpaceDb' table. You can move, or remove it, as needed.
             space =new ParkingSpaceDb();
             db = new qlycarparkingDataContext();
@@ -34,14 +38,9 @@ namespace Carparking
         {
             try
             {
-                space.ID = Int32.Parse(IDtextBox.Text);
-                space.Status = "Empty";
-                space.Price = float.Parse(PricetextBox.Text);
-                space.IDCar = "";
-                space.Area = AreatextBox.Text;
-                space.ParkedDays = 0;
-                db.ParkingSpaceDbs.InsertOnSubmit(space);
-                db.SubmitChanges();
+                ParkingSpace carspace = new ParkingSpace(Int32.Parse(IDtextBox.Text), "Empty", float.Parse(PricetextBox.Text),
+                "", AreatextBox.Text, 0);
+                manager.AddCarParking(carspace);
                 ManaCarParking_Load(sender, e);
             }
             catch
@@ -54,12 +53,13 @@ namespace Carparking
         {
             try
             {
-                space = db.ParkingSpaceDbs.Where(s => s.ID == Int32.Parse(IDtextBox.Text)).Single();
-                if(AreatextBox.Text!="")
-                    space.Area= AreatextBox.Text;
-                if(PricetextBox.Text!="")
-                    space.Price =float.Parse(PricetextBox.Text);
-                db.SubmitChanges();
+                if (PricetextBox.Text == "")
+                    PricetextBox.Text="0";
+                ParkingSpace carspace = new ParkingSpace(Int32.Parse(IDtextBox.Text), "Empty", float.Parse(PricetextBox.Text),
+                "", AreatextBox.Text, 0);
+                if (PricetextBox.Text == "0")
+                    PricetextBox.Text = "";
+                manager.EditCarParking(carspace);
                 ManaCarParking_Load(sender, e);
             }
             catch
@@ -72,9 +72,7 @@ namespace Carparking
         {
             try
             {
-                space = db.ParkingSpaceDbs.Where(s => s.ID == Int32.Parse(IDtextBox.Text)).Single();
-                db.ParkingSpaceDbs.DeleteOnSubmit(space);
-                db.SubmitChanges();
+                manager.DeleteCarParking(Int32.Parse(IDtextBox.Text));
                 ManaCarParking_Load(sender, e);
             }
             catch

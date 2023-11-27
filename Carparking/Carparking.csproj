@@ -136,10 +136,20 @@
       <DependentUpon>qlyuserlogin.dbml</DependentUpon>
     </Compile>
     <Compile Include="RetrieveCar.cs" />
+    <Compile Include="UserDataDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UserDataDataSet10.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UserDataDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet11.xsd</DependentUpon>
     </Compile>
     <Compile Include="UserDataDataSet9.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -239,6 +249,17 @@
     <None Include="qlyuserlogin.dbml.layout">
       <DependentUpon>qlyuserlogin.dbml</DependentUpon>
     </None>
+    <None Include="UserDataDataSet1.xsc">
+      <DependentUpon>UserDataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet1.xss">
+      <DependentUpon>UserDataDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="UserDataDataSet10.xsc">
       <DependentUpon>UserDataDataSet10.xsd</DependentUpon>
     </None>
@@ -249,6 +270,17 @@
     </None>
     <None Include="UserDataDataSet10.xss">
       <DependentUpon>UserDataDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet11.xsc">
+      <DependentUpon>UserDataDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet11.xss">
+      <DependentUpon>UserDataDataSet11.xsd</DependentUpon>
     </None>
     <None Include="UserDataDataSet9.xsc">
       <DependentUpon>UserDataDataSet9.xsd</DependentUpon>

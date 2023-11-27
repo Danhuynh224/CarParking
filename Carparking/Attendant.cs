@@ -11,8 +11,8 @@ namespace Carparking
         private string areaPark;
         private float salary;
         private int workingDay;
-        public Attendant(int id, string numerphone, string name, DateTime birthday, string role
-            ,string areaPark, int workingDay,  float salary ) : base(id, numerphone, name, birthday, role)
+        public Attendant(int id, string name, string numerphone,  DateTime birthday, string role
+            ,string areaPark, int workingDay,  float salary ) : base(id,  name,numerphone, birthday, role)
         {
             this.areaPark = areaPark;
             this.salary = salary;    

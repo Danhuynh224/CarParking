@@ -2,10 +2,10 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="qlycarparking">
   <DataContextMoniker Name="/qlycarparkingDataContext" />
   <nestedChildShapes>
-    <classShape Id="444d1c29-99de-4890-928e-a62f95bad568" absoluteBounds="2.375, 2.375, 2, 1.9631982421875">
+    <classShape Id="1bd5a551-c5a0-4ef5-9ade-70eb99281d6e" absoluteBounds="5.125, 2.5, 2, 1.9631982421875">
       <DataClassMoniker Name="/qlycarparkingDataContext/ParkingSpaceDb" />
       <nestedChildShapes>
-        <elementListCompartment Id="3e0e3d60-544b-4507-8aca-23f2fe04d394" absoluteBounds="2.39, 2.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="0cc8a672-460a-4db5-8d82-a18545686d5d" absoluteBounds="5.14, 2.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

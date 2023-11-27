@@ -48,7 +48,7 @@ namespace Carparking
             {
                 preFormChild.Close();
             }
-            preFormChild = new ManaCarParking();
+            preFormChild = new ManaCarParking(manager);
             OpenChildForm(preFormChild);
         }
 
@@ -61,7 +61,7 @@ namespace Carparking
             {
                 preFormChild.Close();
             }
-            preFormChild = new ManaAttend();
+            preFormChild = new ManaAttend(manager);
             OpenChildForm(preFormChild);
         }
 

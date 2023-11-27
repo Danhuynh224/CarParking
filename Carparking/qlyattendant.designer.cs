@@ -36,7 +36,7 @@ namespace Carparking
     #endregion
 		
 		public qlyattendantDataContext() : 
-				base(global::Carparking.Properties.Settings.Default.UserDataConnectionString1, mappingSource)
+				base(global::Carparking.Properties.Settings.Default.UserDataConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
