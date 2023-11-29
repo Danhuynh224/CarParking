@@ -60,7 +60,7 @@ namespace Carparking
                     {
                         if (manager_radioButton.Checked)
                         {
-                            Manager manager = new Manager(i.ID, i.NumberPhone, i.Fullname, i.Birthday.Value ,i.Role);
+                            Manager manager = new Manager(i.ID, i.Fullname, i.NumberPhone,  i.Birthday.Value ,i.Role);
                             this.Hide();
                             ManagerForm managerform = new ManagerForm(manager);
                             managerform.ShowDialog();
@@ -76,8 +76,9 @@ namespace Carparking
                         }
                         else
                         {
+                            Customer customer = new Customer(i.ID, i.Fullname, i.NumberPhone,  i.Birthday.Value, i.Role);
                             this.Hide();
-                            CustomerForm customerform = new CustomerForm();
+                            CustomerForm customerform = new CustomerForm(customer);
                             customerform.ShowDialog();
                             this.Show();
                         }

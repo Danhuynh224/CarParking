@@ -60,6 +60,7 @@
     <Compile Include="AttParkCar.Designer.cs">
       <DependentUpon>AttParkCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Car.cs" />
     <Compile Include="CusBookTicket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +116,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>qlyattendant.dbml</DependentUpon>
     </Compile>
+    <Compile Include="qlyCar.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qlyCar.dbml</DependentUpon>
+    </Compile>
     <Compile Include="qlycarparking.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -150,6 +156,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UserDataDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="UserDataDataSet9.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -217,6 +238,14 @@
     <None Include="qlyattendant.dbml.layout">
       <DependentUpon>qlyattendant.dbml</DependentUpon>
     </None>
+    <None Include="qlyCar.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>qlyCar.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qlyCar.dbml.layout">
+      <DependentUpon>qlyCar.dbml</DependentUpon>
+    </None>
     <None Include="qlycarparking.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>qlycarparking.designer.cs</LastGenOutput>
@@ -281,6 +310,39 @@
     </None>
     <None Include="UserDataDataSet11.xss">
       <DependentUpon>UserDataDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet2.xsc">
+      <DependentUpon>UserDataDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet2.xss">
+      <DependentUpon>UserDataDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet3.xsc">
+      <DependentUpon>UserDataDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet3.xss">
+      <DependentUpon>UserDataDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet4.xsc">
+      <DependentUpon>UserDataDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet4.xss">
+      <DependentUpon>UserDataDataSet4.xsd</DependentUpon>
     </None>
     <None Include="UserDataDataSet9.xsc">
       <DependentUpon>UserDataDataSet9.xsd</DependentUpon>

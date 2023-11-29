@@ -3,11 +3,11 @@
   <Table Name="dbo.ParkingSpaceDb" Member="ParkingSpaceDbs">
     <Type Name="ParkingSpaceDb">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Status" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="IDCar" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
       <Column Name="Area" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="ParkedDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="IDCar" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="DatePark" Type="System.DateTime" DbType="Date" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

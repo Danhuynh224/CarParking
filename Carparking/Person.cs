@@ -32,7 +32,7 @@ namespace Carparking
 
         virtual public string PrinfDetail()
         {
-            return "ID: " + id.ToString() + "\nName: " + name + "\nNumerPhone: " + numerphone + "\nBirthday: " + BirthDay.ToShortDateString() + "\nRole: " + role;
+            return "ID: " + id.ToString() + "\nName: " + name + "\nNumerPhone: " + numerphone + "\nBirthday: " + BirthDay.ToShortDateString() + "\nRole: " + role+"\n";
         }
     }
 }

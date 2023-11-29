@@ -120,7 +120,7 @@ namespace Carparking
             space.Price = carspace.Price;
             space.IDCar = carspace.IDCar;
             space.Area = carspace.Area;
-            space.ParkedDays = 0;
+            space.DatePark = null;
             db.ParkingSpaceDbs.InsertOnSubmit(space);
             db.SubmitChanges();
         }

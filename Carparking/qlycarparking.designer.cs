@@ -82,15 +82,15 @@ namespace Carparking
 		
 		private int _ID;
 		
+		private string _Area;
+		
 		private string _Status;
 		
-		private System.Nullable<double> _Price;
+		private double _Price;
 		
 		private string _IDCar;
 		
-		private string _Area;
-		
-		private System.Nullable<int> _ParkedDays;
+		private System.Nullable<System.DateTime> _DatePark;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -98,16 +98,16 @@ namespace Carparking
     partial void OnCreated();
     partial void OnIDChanging(int value);
     partial void OnIDChanged();
+    partial void OnAreaChanging(string value);
+    partial void OnAreaChanged();
     partial void OnStatusChanging(string value);
     partial void OnStatusChanged();
-    partial void OnPriceChanging(System.Nullable<double> value);
+    partial void OnPriceChanging(double value);
     partial void OnPriceChanged();
     partial void OnIDCarChanging(string value);
     partial void OnIDCarChanged();
-    partial void OnAreaChanging(string value);
-    partial void OnAreaChanged();
-    partial void OnParkedDaysChanging(System.Nullable<int> value);
-    partial void OnParkedDaysChanged();
+    partial void OnDateParkChanging(System.Nullable<System.DateTime> value);
+    partial void OnDateParkChanged();
     #endregion
 		
 		public ParkingSpaceDb()
@@ -135,6 +135,26 @@ namespace Carparking
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Area", DbType="NChar(10)")]
+		public string Area
+		{
+			get
+			{
+				return this._Area;
+			}
+			set
+			{
+				if ((this._Area != value))
+				{
+					this.OnAreaChanging(value);
+					this.SendPropertyChanging();
+					this._Area = value;
+					this.SendPropertyChanged("Area");
+					this.OnAreaChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="NChar(10)")]
 		public string Status
 		{
@@ -155,8 +175,8 @@ namespace Carparking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Float")]
-		public System.Nullable<double> Price
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Float NOT NULL")]
+		public double Price
 		{
 			get
 			{
@@ -195,42 +215,22 @@ namespace Carparking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Area", DbType="NChar(10)")]
-		public string Area
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DatePark", DbType="Date")]
+		public System.Nullable<System.DateTime> DatePark
 		{
 			get
 			{
-				return this._Area;
+				return this._DatePark;
 			}
 			set
 			{
-				if ((this._Area != value))
+				if ((this._DatePark != value))
 				{
-					this.OnAreaChanging(value);
+					this.OnDateParkChanging(value);
 					this.SendPropertyChanging();
-					this._Area = value;
-					this.SendPropertyChanged("Area");
-					this.OnAreaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ParkedDays", DbType="Int")]
-		public System.Nullable<int> ParkedDays
-		{
-			get
-			{
-				return this._ParkedDays;
-			}
-			set
-			{
-				if ((this._ParkedDays != value))
-				{
-					this.OnParkedDaysChanging(value);
-					this.SendPropertyChanging();
-					this._ParkedDays = value;
-					this.SendPropertyChanged("ParkedDays");
-					this.OnParkedDaysChanged();
+					this._DatePark = value;
+					this.SendPropertyChanged("DatePark");
+					this.OnDateParkChanged();
 				}
 			}
 		}

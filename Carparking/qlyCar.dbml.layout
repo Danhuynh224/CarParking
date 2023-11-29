@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="qlyCar">
+  <DataContextMoniker Name="/qlyCarDataContext" />
+  <nestedChildShapes>
+    <classShape Id="de51b86c-ffb4-4c1f-b2a6-44c16cbfabe5" absoluteBounds="7, 1.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/qlyCarDataContext/CarDb" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92324a4b-ff6a-4267-90d4-bb7fae24cf59" absoluteBounds="7.015, 1.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

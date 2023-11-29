@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace Carparking
 {
+    
     public partial class CustomerForm : Form
     {
-        public CustomerForm()
+        Customer customer;
+        public CustomerForm(Customer customer)
         {
             InitializeComponent();
+            this.customer = customer;
         }
 
         private Form currentFormChild;
@@ -48,7 +51,7 @@ namespace Carparking
             {
                 preFormChild.Close();
             }
-            preFormChild = new CusBookTicket();
+            preFormChild = new CusBookTicket(customer);
             OpenChildForm(preFormChild);
         }
     }
