@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UserData" Class="qlyrequestDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DANHUYNH\SQLEXPRESS;Initial Catalog=UserData;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False" SettingsObjectName="Carparking.Properties.Settings" SettingsPropertyName="UserDataConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ResquestDb" Member="ResquestDbs">
+    <Type Name="ResquestDb">
+      <Column Name="IDRequest" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDCustomer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDCar" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CarBrand" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="AreaRequest" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDParkRequest" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

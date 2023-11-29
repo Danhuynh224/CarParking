@@ -54,5 +54,15 @@ namespace Carparking
             preFormChild = new CusBookTicket(customer);
             OpenChildForm(preFormChild);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (preFormChild != null)
+            {
+                preFormChild.Close();
+            }
+            preFormChild = new CusRequestForm(customer);
+            OpenChildForm(preFormChild);
+        }
     }
 }

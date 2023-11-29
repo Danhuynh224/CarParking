@@ -33,16 +33,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.IDtextBox = new System.Windows.Forms.TextBox();
             this.fullnametextBox = new System.Windows.Forms.TextBox();
-            this.attendantDbBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.userDataDataSet9 = new Carparking.UserDataDataSet9();
             this.phonetextBox = new System.Windows.Forms.TextBox();
             this.birthdateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.AreaParktextBox = new System.Windows.Forms.TextBox();
             this.WorkdaytextBox = new System.Windows.Forms.TextBox();
             this.SalarytextBox = new System.Windows.Forms.TextBox();
             this.savebutton = new System.Windows.Forms.Button();
@@ -52,22 +48,18 @@
             this.ByIDtextBox = new System.Windows.Forms.TextBox();
             this.SearchByNametextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.attendantDbTableAdapter4 = new Carparking.UserDataDataSet9TableAdapters.AttendantDbTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.userDataDataSet = new Carparking.UserDataDataSet();
+            this.userDataDataSet14 = new Carparking.UserDataDataSet14();
             this.attendantDbBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.attendantDbTableAdapter = new Carparking.UserDataDataSetTableAdapters.AttendantDbTableAdapter();
+            this.attendantDbTableAdapter = new Carparking.UserDataDataSet14TableAdapters.AttendantDbTableAdapter();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.workingDayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.attendantDbBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet9)).BeginInit();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.attendantDbBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,19 +99,10 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Birthday";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(502, 69);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 16);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "AreaPark:";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(505, 119);
+            this.label6.Location = new System.Drawing.Point(505, 65);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 16);
             this.label6.TabIndex = 6;
@@ -128,7 +111,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(505, 174);
+            this.label7.Location = new System.Drawing.Point(505, 117);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 16);
             this.label7.TabIndex = 7;
@@ -148,16 +131,6 @@
             this.fullnametextBox.Size = new System.Drawing.Size(211, 22);
             this.fullnametextBox.TabIndex = 9;
             // 
-            // attendantDbBindingSource3
-            // 
-            this.attendantDbBindingSource3.DataMember = "AttendantDb";
-            this.attendantDbBindingSource3.DataSource = this.userDataDataSet9;
-            // 
-            // userDataDataSet9
-            // 
-            this.userDataDataSet9.DataSetName = "UserDataDataSet9";
-            this.userDataDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // phonetextBox
             // 
             this.phonetextBox.Location = new System.Drawing.Point(124, 171);
@@ -172,23 +145,16 @@
             this.birthdateTimePicker.Size = new System.Drawing.Size(264, 22);
             this.birthdateTimePicker.TabIndex = 12;
             // 
-            // AreaParktextBox
-            // 
-            this.AreaParktextBox.Location = new System.Drawing.Point(594, 68);
-            this.AreaParktextBox.Name = "AreaParktextBox";
-            this.AreaParktextBox.Size = new System.Drawing.Size(100, 22);
-            this.AreaParktextBox.TabIndex = 13;
-            // 
             // WorkdaytextBox
             // 
-            this.WorkdaytextBox.Location = new System.Drawing.Point(596, 119);
+            this.WorkdaytextBox.Location = new System.Drawing.Point(596, 65);
             this.WorkdaytextBox.Name = "WorkdaytextBox";
             this.WorkdaytextBox.Size = new System.Drawing.Size(98, 22);
             this.WorkdaytextBox.TabIndex = 14;
             // 
             // SalarytextBox
             // 
-            this.SalarytextBox.Location = new System.Drawing.Point(594, 174);
+            this.SalarytextBox.Location = new System.Drawing.Point(594, 117);
             this.SalarytextBox.Name = "SalarytextBox";
             this.SalarytextBox.Size = new System.Drawing.Size(100, 22);
             this.SalarytextBox.TabIndex = 15;
@@ -257,10 +223,6 @@
             this.label10.TabIndex = 22;
             this.label10.Text = "Search By Name";
             // 
-            // attendantDbTableAdapter4
-            // 
-            this.attendantDbTableAdapter4.ClearBeforeFill = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -270,9 +232,8 @@
             this.fullnameDataGridViewTextBoxColumn,
             this.dataGridViewTextBoxColumn22,
             this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn24,
             this.workingDayDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn25});
+            this.dataGridViewTextBoxColumn24});
             this.dataGridView1.DataSource = this.attendantDbBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(70, 386);
             this.dataGridView1.Name = "dataGridView1";
@@ -281,15 +242,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(863, 150);
             this.dataGridView1.TabIndex = 24;
             // 
-            // userDataDataSet
+            // userDataDataSet14
             // 
-            this.userDataDataSet.DataSetName = "UserDataDataSet";
-            this.userDataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.userDataDataSet14.DataSetName = "UserDataDataSet14";
+            this.userDataDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // attendantDbBindingSource
             // 
             this.attendantDbBindingSource.DataMember = "AttendantDb";
-            this.attendantDbBindingSource.DataSource = this.userDataDataSet;
+            this.attendantDbBindingSource.DataSource = this.userDataDataSet14;
             // 
             // attendantDbTableAdapter
             // 
@@ -327,14 +288,6 @@
             this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
             this.dataGridViewTextBoxColumn23.Width = 125;
             // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "AreaPark";
-            this.dataGridViewTextBoxColumn24.HeaderText = "AreaPark";
-            this.dataGridViewTextBoxColumn24.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.Width = 125;
-            // 
             // workingDayDataGridViewTextBoxColumn
             // 
             this.workingDayDataGridViewTextBoxColumn.DataPropertyName = "WorkingDay";
@@ -343,13 +296,13 @@
             this.workingDayDataGridViewTextBoxColumn.Name = "workingDayDataGridViewTextBoxColumn";
             this.workingDayDataGridViewTextBoxColumn.Width = 125;
             // 
-            // dataGridViewTextBoxColumn25
+            // dataGridViewTextBoxColumn24
             // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "Salary";
-            this.dataGridViewTextBoxColumn25.HeaderText = "Salary";
-            this.dataGridViewTextBoxColumn25.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.Width = 125;
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "Salary";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Salary";
+            this.dataGridViewTextBoxColumn24.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.Width = 125;
             // 
             // ManaAttend
             // 
@@ -366,14 +319,12 @@
             this.Controls.Add(this.savebutton);
             this.Controls.Add(this.SalarytextBox);
             this.Controls.Add(this.WorkdaytextBox);
-            this.Controls.Add(this.AreaParktextBox);
             this.Controls.Add(this.birthdateTimePicker);
             this.Controls.Add(this.phonetextBox);
             this.Controls.Add(this.fullnametextBox);
             this.Controls.Add(this.IDtextBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -381,10 +332,8 @@
             this.Name = "ManaAttend";
             this.Text = "ManaAttend";
             this.Load += new System.EventHandler(this.ManaAttend_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.attendantDbBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.attendantDbBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -423,14 +372,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox IDtextBox;
         private System.Windows.Forms.TextBox fullnametextBox;
         private System.Windows.Forms.TextBox phonetextBox;
         private System.Windows.Forms.DateTimePicker birthdateTimePicker;
-        private System.Windows.Forms.TextBox AreaParktextBox;
         private System.Windows.Forms.TextBox WorkdaytextBox;
         private System.Windows.Forms.TextBox SalarytextBox;
         private System.Windows.Forms.Button savebutton;
@@ -440,19 +387,15 @@
         private System.Windows.Forms.TextBox ByIDtextBox;
         private System.Windows.Forms.TextBox SearchByNametextBox;
         private System.Windows.Forms.Label label10;
-        private UserDataDataSet9 userDataDataSet9;
-        private System.Windows.Forms.BindingSource attendantDbBindingSource3;
-        private UserDataDataSet9TableAdapters.AttendantDbTableAdapter attendantDbTableAdapter4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private UserDataDataSet userDataDataSet;
+        private UserDataDataSet14 userDataDataSet14;
         private System.Windows.Forms.BindingSource attendantDbBindingSource;
-        private UserDataDataSetTableAdapters.AttendantDbTableAdapter attendantDbTableAdapter;
+        private UserDataDataSet14TableAdapters.AttendantDbTableAdapter attendantDbTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.DataGridViewTextBoxColumn workingDayDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
     }
 }

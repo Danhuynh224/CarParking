@@ -52,5 +52,32 @@ namespace Carparking
             MessageBox.Show("Park successfully");
 
         }
+
+        public void Request(Car car , string areapark, DateTime date) 
+        {
+            Cars.Add(car);
+            car.addDb();
+            ResquestDb rq = new ResquestDb();
+            qlyrequestDataContext dbrq = new qlyrequestDataContext();
+            rq.IDRequest = dbrq.ResquestDbs.Count()+1;
+            rq.IDCustomer = car.IDUser;
+            rq.CarBrand = car.CarBrand;
+            rq.IDCar = car.CarID;
+            rq.IDParkRequest = car.ParkID;
+            rq.AreaRequest = areapark;
+            rq.Name = Name;
+            rq.Color = car.Color;
+            rq.Date = date;
+
+            if (car.ParkID != 0)
+            {
+                qlycarparkingDataContext dbcp = new qlycarparkingDataContext();
+                ParkingSpaceDb space = dbcp.ParkingSpaceDbs.Where(s => s.ID == car.ParkID).Single();
+                space.Status = "Requesting";
+                dbcp.SubmitChanges();
+            }
+            dbrq.ResquestDbs.InsertOnSubmit(rq);
+            dbrq.SubmitChanges();
+        }
     }
 }

@@ -67,6 +67,12 @@
     <Compile Include="CusBookTicket.Designer.cs">
       <DependentUpon>CusBookTicket.cs</DependentUpon>
     </Compile>
+    <Compile Include="CusRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CusRequestForm.Designer.cs">
+      <DependentUpon>CusRequestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerForm.cs">
       <SubType>Form</SubType>
@@ -136,6 +142,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>qlymanager.dbml</DependentUpon>
     </Compile>
+    <Compile Include="qlyrequest.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qlyrequest.dbml</DependentUpon>
+    </Compile>
     <Compile Include="qlyuserlogin.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -157,6 +168,36 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UserDataDataSet11.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UserDataDataSet111.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet111.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet16.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UserDataDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -172,6 +213,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UserDataDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UserDataDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet81.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet81.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UserDataDataSet9.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -186,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CusBookTicket.resx">
       <DependentUpon>CusBookTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CusRequestForm.resx">
+      <DependentUpon>CusRequestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
@@ -270,6 +334,14 @@
     <None Include="qlymanager.dbml.layout">
       <DependentUpon>qlymanager.dbml</DependentUpon>
     </None>
+    <None Include="qlyrequest.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>qlyrequest.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qlyrequest.dbml.layout">
+      <DependentUpon>qlyrequest.dbml</DependentUpon>
+    </None>
     <None Include="qlyuserlogin.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>qlyuserlogin.designer.cs</LastGenOutput>
@@ -311,6 +383,72 @@
     <None Include="UserDataDataSet11.xss">
       <DependentUpon>UserDataDataSet11.xsd</DependentUpon>
     </None>
+    <None Include="UserDataDataSet111.xsc">
+      <DependentUpon>UserDataDataSet111.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet111.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet111.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet111.xss">
+      <DependentUpon>UserDataDataSet111.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet12.xsc">
+      <DependentUpon>UserDataDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet12.xss">
+      <DependentUpon>UserDataDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet13.xsc">
+      <DependentUpon>UserDataDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet13.xss">
+      <DependentUpon>UserDataDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet14.xsc">
+      <DependentUpon>UserDataDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet14.xss">
+      <DependentUpon>UserDataDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet15.xsc">
+      <DependentUpon>UserDataDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet15.xss">
+      <DependentUpon>UserDataDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet16.xsc">
+      <DependentUpon>UserDataDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet16.xss">
+      <DependentUpon>UserDataDataSet16.xsd</DependentUpon>
+    </None>
     <None Include="UserDataDataSet2.xsc">
       <DependentUpon>UserDataDataSet2.xsd</DependentUpon>
     </None>
@@ -343,6 +481,50 @@
     </None>
     <None Include="UserDataDataSet4.xss">
       <DependentUpon>UserDataDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet5.xsc">
+      <DependentUpon>UserDataDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet5.xss">
+      <DependentUpon>UserDataDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet6.xsc">
+      <DependentUpon>UserDataDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet6.xss">
+      <DependentUpon>UserDataDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet7.xsc">
+      <DependentUpon>UserDataDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet7.xss">
+      <DependentUpon>UserDataDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet81.xsc">
+      <DependentUpon>UserDataDataSet81.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet81.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet81.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet81.xss">
+      <DependentUpon>UserDataDataSet81.xsd</DependentUpon>
     </None>
     <None Include="UserDataDataSet9.xsc">
       <DependentUpon>UserDataDataSet9.xsd</DependentUpon>

@@ -88,8 +88,6 @@ namespace Carparking
 		
 		private System.Nullable<System.DateTime> _Birthday;
 		
-		private string _AreaPark;
-		
 		private System.Nullable<int> _WorkingDay;
 		
 		private System.Nullable<double> _Salary;
@@ -106,8 +104,6 @@ namespace Carparking
     partial void OnPhoneChanged();
     partial void OnBirthdayChanging(System.Nullable<System.DateTime> value);
     partial void OnBirthdayChanged();
-    partial void OnAreaParkChanging(string value);
-    partial void OnAreaParkChanged();
     partial void OnWorkingDayChanging(System.Nullable<int> value);
     partial void OnWorkingDayChanged();
     partial void OnSalaryChanging(System.Nullable<double> value);
@@ -195,26 +191,6 @@ namespace Carparking
 					this._Birthday = value;
 					this.SendPropertyChanged("Birthday");
 					this.OnBirthdayChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AreaPark", DbType="NVarChar(50)")]
-		public string AreaPark
-		{
-			get
-			{
-				return this._AreaPark;
-			}
-			set
-			{
-				if ((this._AreaPark != value))
-				{
-					this.OnAreaParkChanging(value);
-					this.SendPropertyChanging();
-					this._AreaPark = value;
-					this.SendPropertyChanged("AreaPark");
-					this.OnAreaParkChanged();
 				}
 			}
 		}

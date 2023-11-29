@@ -8,18 +8,18 @@ namespace Carparking
 {
     public class Attendant : Person
     {
-        private string areaPark;
+       
         private float salary;
         private int workingDay;
         public Attendant(int id, string name, string numerphone,  DateTime birthday, string role
-            ,string areaPark, int workingDay,  float salary ) : base(id,  name,numerphone, birthday, role)
+            , int workingDay,  float salary ) : base(id,  name,numerphone, birthday, role)
         {
-            this.areaPark = areaPark;
+           
             this.salary = salary;    
             this.workingDay = workingDay;
         }
 
-        public string AreaPark { get => areaPark; set => areaPark = value; }
+        
         public float Salary { get => salary; set => salary = value; }
         public int WorkingDay { get => workingDay; set => workingDay = value; }
 
@@ -29,7 +29,7 @@ namespace Carparking
         }
         public override string PrinfDetail()
         {
-            return base.PrinfDetail() + "\nAreaPark: " + areaPark + "\nSalary: " +salary;
+            return base.PrinfDetail()  + "\nSalary: " +salary;
         }
     }
 }

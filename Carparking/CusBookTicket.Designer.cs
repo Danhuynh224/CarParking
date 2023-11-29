@@ -44,21 +44,19 @@
             this.iDCarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateParkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parkingSpaceDbBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userDataDataSet4 = new Carparking.UserDataDataSet4();
+            this.userDataDataSet12 = new Carparking.UserDataDataSet12();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.Parkbutton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.parkingSpaceDbTableAdapter = new Carparking.UserDataDataSet4TableAdapters.ParkingSpaceDbTableAdapter();
             this.CarBrandtextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.CarColortextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.parkingSpaceDbTableAdapter = new Carparking.UserDataDataSet12TableAdapters.ParkingSpaceDbTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parkingSpaceDbBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet12)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -72,11 +70,12 @@
             // 
             // IDParktextBox
             // 
-            this.IDParktextBox.Location = new System.Drawing.Point(200, 83);
+            this.IDParktextBox.Location = new System.Drawing.Point(200, 79);
             this.IDParktextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.IDParktextBox.Name = "IDParktextBox";
             this.IDParktextBox.Size = new System.Drawing.Size(178, 22);
             this.IDParktextBox.TabIndex = 1;
+            this.IDParktextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.IDParktextBox_KeyUp);
             // 
             // ParkAreatextBox
             // 
@@ -85,6 +84,7 @@
             this.ParkAreatextBox.Name = "ParkAreatextBox";
             this.ParkAreatextBox.Size = new System.Drawing.Size(178, 22);
             this.ParkAreatextBox.TabIndex = 3;
+            this.ParkAreatextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ParkAreatextBox_KeyUp);
             // 
             // label2
             // 
@@ -133,13 +133,14 @@
             this.iDCarDataGridViewTextBoxColumn,
             this.dateParkDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.parkingSpaceDbBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(169, 380);
+            this.dataGridView1.Location = new System.Drawing.Point(177, 380);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(686, 185);
+            this.dataGridView1.Size = new System.Drawing.Size(861, 185);
             this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -192,12 +193,12 @@
             // parkingSpaceDbBindingSource
             // 
             this.parkingSpaceDbBindingSource.DataMember = "ParkingSpaceDb";
-            this.parkingSpaceDbBindingSource.DataSource = this.userDataDataSet4;
+            this.parkingSpaceDbBindingSource.DataSource = this.userDataDataSet12;
             // 
-            // userDataDataSet4
+            // userDataDataSet12
             // 
-            this.userDataDataSet4.DataSetName = "UserDataDataSet4";
-            this.userDataDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.userDataDataSet12.DataSetName = "UserDataDataSet12";
+            this.userDataDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label7
             // 
@@ -219,7 +220,7 @@
             // 
             // Parkbutton
             // 
-            this.Parkbutton.Location = new System.Drawing.Point(430, 150);
+            this.Parkbutton.Location = new System.Drawing.Point(571, 256);
             this.Parkbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Parkbutton.Name = "Parkbutton";
             this.Parkbutton.Size = new System.Drawing.Size(166, 40);
@@ -228,38 +229,15 @@
             this.Parkbutton.UseVisualStyleBackColor = true;
             this.Parkbutton.Click += new System.EventHandler(this.Parkbutton_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(650, 152);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 40);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Print Bill";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(930, 277);
+            this.button3.Location = new System.Drawing.Point(818, 256);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(166, 40);
             this.button3.TabIndex = 16;
             this.button3.Text = "Log Out";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(895, 152);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(131, 40);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "ParkingRequest";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // parkingSpaceDbTableAdapter
-            // 
-            this.parkingSpaceDbTableAdapter.ClearBeforeFill = true;
             // 
             // CarBrandtextBox
             // 
@@ -280,7 +258,7 @@
             // 
             // CarColortextBox
             // 
-            this.CarColortextBox.Location = new System.Drawing.Point(526, 83);
+            this.CarColortextBox.Location = new System.Drawing.Point(691, 85);
             this.CarColortextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CarColortextBox.Name = "CarColortextBox";
             this.CarColortextBox.Size = new System.Drawing.Size(178, 22);
@@ -289,11 +267,15 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(416, 87);
+            this.label5.Location = new System.Drawing.Point(581, 89);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 16);
             this.label5.TabIndex = 20;
             this.label5.Text = "Car Color";
+            // 
+            // parkingSpaceDbTableAdapter
+            // 
+            this.parkingSpaceDbTableAdapter.ClearBeforeFill = true;
             // 
             // CusBookTicket
             // 
@@ -304,9 +286,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.CarBrandtextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.Parkbutton);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label7);
@@ -324,7 +304,7 @@
             this.Load += new System.EventHandler(this.CusBookTicket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.parkingSpaceDbBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,21 +323,19 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button Parkbutton;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private UserDataDataSet4 userDataDataSet4;
+        protected System.Windows.Forms.TextBox CarBrandtextBox;
+        protected System.Windows.Forms.Label label4;
+        protected System.Windows.Forms.TextBox CarColortextBox;
+        protected System.Windows.Forms.Label label5;
+        private UserDataDataSet12 userDataDataSet12;
         private System.Windows.Forms.BindingSource parkingSpaceDbBindingSource;
-        private UserDataDataSet4TableAdapters.ParkingSpaceDbTableAdapter parkingSpaceDbTableAdapter;
+        private UserDataDataSet12TableAdapters.ParkingSpaceDbTableAdapter parkingSpaceDbTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn areaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDCarDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateParkDataGridViewTextBoxColumn;
-        protected System.Windows.Forms.TextBox CarBrandtextBox;
-        protected System.Windows.Forms.Label label4;
-        protected System.Windows.Forms.TextBox CarColortextBox;
-        protected System.Windows.Forms.Label label5;
     }
 }

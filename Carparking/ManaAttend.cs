@@ -26,9 +26,8 @@ namespace Carparking
 
         private void ManaAttend_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'userDataDataSet.AttendantDb' table. You can move, or remove it, as needed.
-            this.attendantDbTableAdapter.Fill(this.userDataDataSet.AttendantDb);
-
+            // TODO: This line of code loads data into the 'userDataDataSet14.AttendantDb' table. You can move, or remove it, as needed.
+            this.attendantDbTableAdapter.Fill(this.userDataDataSet14.AttendantDb);
             attendant =new AttendantDb();
             atdb = new qlyattendantDataContext();
             var list = (from s in atdb.AttendantDbs select s).ToList(); 
@@ -46,7 +45,7 @@ namespace Carparking
              try
             { 
                 Attendant attendant = new Attendant(Int32.Parse(IDtextBox.Text), fullnametextBox.Text, phonetextBox.Text, birthdateTimePicker.Value,"Attendant", 
-                    AreaParktextBox.Text, Int32.Parse(WorkdaytextBox.Text), float.Parse(SalarytextBox.Text));
+                     Int32.Parse(WorkdaytextBox.Text), float.Parse(SalarytextBox.Text));
                 manager.AddAttendant(attendant);
                 db = new qlyuserloginDataContext();
                 user = db.UserLogins.Where(s => s.ID == attendant.Id && s.Role == "Attendant").Single();
@@ -85,7 +84,7 @@ namespace Carparking
                 if (SalarytextBox.Text == "")
                     SalarytextBox.Text = "0";
                 Attendant attendant = new Attendant(Int32.Parse(IDtextBox.Text), fullnametextBox.Text, phonetextBox.Text, birthdateTimePicker.Value, "Attendant",
-                    AreaParktextBox.Text, Int32.Parse(WorkdaytextBox.Text), float.Parse(SalarytextBox.Text));    
+                     Int32.Parse(WorkdaytextBox.Text), float.Parse(SalarytextBox.Text));    
                 manager.EditAttendant(attendant);
                 if (WorkdaytextBox.Text == "32")
                     WorkdaytextBox.Text = "";
@@ -108,7 +107,7 @@ namespace Carparking
             IDtextBox.DataBindings.Clear();
             fullnametextBox.DataBindings.Clear();
             phonetextBox.DataBindings.Clear();
-            AreaParktextBox.DataBindings.Clear();
+        
             WorkdaytextBox.DataBindings.Clear();
             SalarytextBox.DataBindings.Clear();
             birthdateTimePicker.DataBindings.Clear();
@@ -116,8 +115,8 @@ namespace Carparking
             fullnametextBox.DataBindings.Add("text", list, "Fullname");
             phonetextBox.DataBindings.Add("text", list, "Phone");
             birthdateTimePicker.DataBindings.Add("Value", list, "Birthday");
-            AreaParktextBox.DataBindings.Add("text", list, "AreaPark");
-            WorkdaytextBox.DataBindings.Add("text", list, "NumberCarAssisted");
+            
+            WorkdaytextBox.DataBindings.Add("text", list, "WorkingDay");
             SalarytextBox.DataBindings.Add("text", list, "Salary");
             dataGridView1.DataSource = list;
         }
@@ -136,7 +135,7 @@ namespace Carparking
             IDtextBox.DataBindings.Clear();
             fullnametextBox.DataBindings.Clear();
             phonetextBox.DataBindings.Clear();
-            AreaParktextBox.DataBindings.Clear();
+           
             WorkdaytextBox.DataBindings.Clear();
             SalarytextBox.DataBindings.Clear();
             birthdateTimePicker.DataBindings.Clear();
@@ -144,8 +143,8 @@ namespace Carparking
             fullnametextBox.DataBindings.Add("text", list, "Fullname");
             phonetextBox.DataBindings.Add("text", list, "Phone");
             birthdateTimePicker.DataBindings.Add("Value", list, "Birthday");
-            AreaParktextBox.DataBindings.Add("text", list, "AreaPark");
-            WorkdaytextBox.DataBindings.Add("text", list, "NumberCarAssisted");
+            
+            WorkdaytextBox.DataBindings.Add("text", list, "WorkingDay");
             SalarytextBox.DataBindings.Add("text", list, "Salary");
             dataGridView1.DataSource = list;
         }

@@ -45,7 +45,7 @@ namespace Carparking
             attendant.Fullname = atten.Name;
             attendant.Phone = atten.Numerphone;
             attendant.Birthday = atten.BirthDay.Date;
-            attendant.AreaPark = atten.AreaPark;
+          
             attendant.WorkingDay = atten.WorkingDay;
             attendant.Salary = atten.Salary;
             user.ID = atten.Id;
@@ -92,7 +92,7 @@ namespace Carparking
                 attendant.Birthday = atten.BirthDay.Date;
                 user.Birthday = attendant.Birthday;
             }
-            if (atten.AreaPark != "") attendant.AreaPark = atten.AreaPark;
+           
             if (atten.WorkingDay!=32) attendant.WorkingDay = atten.WorkingDay;
             if (atten.Salary != 0) attendant.Salary = atten.Salary;
             atdb.SubmitChanges();
