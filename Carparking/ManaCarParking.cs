@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -107,6 +108,23 @@ namespace Carparking
             AreatextBox.DataBindings.Add("text", list, "Area");
             PricetextBox.DataBindings.Add("text", list, "Price");
             dataGridView1.DataSource = list;
+        }
+
+        private void savetofilespace_button_Click(object sender, EventArgs e)
+        {
+            //string path = "ParkingSpace.txt";
+
+            //TextWriter wrt = new StreamWriter(path, true);
+            //dataGridView1.AllowUserToAddRows = false;
+            //wrt.WriteLine("   ID\t\t  Status\tPrice\t\tIDCar \t\tArea \t\tParkedDay");
+            //for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            //{
+            //    for (int j = 0; j < dataGridView1.Columns.Count; j++)
+            //        wrt.Write("|" + "\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+            //    wrt.WriteLine("");
+            //    wrt.WriteLine("================================================");
+            //}
+            //wrt.Close();
         }
     }
 }

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Carparking
 {
@@ -34,5 +36,33 @@ namespace Carparking
         {
             return price*parkedDays;
         }
+
+        public string getDetailInf()
+        {
+            return "\n----------------------------\n" + 
+                "\nIDSlot: " + iD + "\nArea: " + area + "\nStatus: " + status + "\nPrice: " 
+                + price + "\nIDCar: " + iDCar + "\nParkedDays: " + parkedDays 
+                + "\n\n----------------------------\n";
+        }
+
+
+        public void xuatFile()
+        {
+            //string path = "ParkingSpace.txt";
+
+            //TextWriter wrt = new StreamWriter(path, true);
+            //dataGridView1.AllowUserToAddRows = false;
+            //wrt.WriteLine("   ID\t\t  Status\tOutCome\t\tLoiNhuan");
+            //for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            //{
+            //    for (int j = 0; j < dataGridView1.Columns.Count; j++)
+            //        wrt.Write("|" + "\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+            //    wrt.WriteLine("");
+            //    wrt.WriteLine("================================================");
+            //}
+            //wrt.Close();
+        }
+
+
     }
 }

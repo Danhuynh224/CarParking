@@ -16,5 +16,10 @@ namespace Carparking
         {
             InitializeComponent();
         }
+
+        private void AttParkCar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
