@@ -82,21 +82,21 @@ namespace Carparking
 		
 		private int _IDRequest;
 		
-		private System.Nullable<int> _IDCustomer;
-		
-		private string _IDCar;
+		private int _IDCustomer;
 		
 		private string _Name;
+		
+		private string _IDCar;
 		
 		private string _CarBrand;
 		
 		private string _Color;
 		
-		private string _AreaRequest;
-		
 		private int _IDParkRequest;
 		
-		private System.Nullable<System.DateTime> _Date;
+		private string _AreaRequest;
+		
+		private System.DateTime _Date;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -104,21 +104,21 @@ namespace Carparking
     partial void OnCreated();
     partial void OnIDRequestChanging(int value);
     partial void OnIDRequestChanged();
-    partial void OnIDCustomerChanging(System.Nullable<int> value);
+    partial void OnIDCustomerChanging(int value);
     partial void OnIDCustomerChanged();
-    partial void OnIDCarChanging(string value);
-    partial void OnIDCarChanged();
     partial void OnNameChanging(string value);
     partial void OnNameChanged();
+    partial void OnIDCarChanging(string value);
+    partial void OnIDCarChanged();
     partial void OnCarBrandChanging(string value);
     partial void OnCarBrandChanged();
     partial void OnColorChanging(string value);
     partial void OnColorChanged();
-    partial void OnAreaRequestChanging(string value);
-    partial void OnAreaRequestChanged();
     partial void OnIDParkRequestChanging(int value);
     partial void OnIDParkRequestChanged();
-    partial void OnDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnAreaRequestChanging(string value);
+    partial void OnAreaRequestChanged();
+    partial void OnDateChanging(System.DateTime value);
     partial void OnDateChanged();
     #endregion
 		
@@ -147,8 +147,8 @@ namespace Carparking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCustomer", DbType="Int")]
-		public System.Nullable<int> IDCustomer
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCustomer", DbType="Int NOT NULL")]
+		public int IDCustomer
 		{
 			get
 			{
@@ -163,26 +163,6 @@ namespace Carparking
 					this._IDCustomer = value;
 					this.SendPropertyChanged("IDCustomer");
 					this.OnIDCustomerChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCar", DbType="NVarChar(50)")]
-		public string IDCar
-		{
-			get
-			{
-				return this._IDCar;
-			}
-			set
-			{
-				if ((this._IDCar != value))
-				{
-					this.OnIDCarChanging(value);
-					this.SendPropertyChanging();
-					this._IDCar = value;
-					this.SendPropertyChanged("IDCar");
-					this.OnIDCarChanged();
 				}
 			}
 		}
@@ -203,6 +183,26 @@ namespace Carparking
 					this._Name = value;
 					this.SendPropertyChanged("Name");
 					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCar", DbType="NVarChar(50)")]
+		public string IDCar
+		{
+			get
+			{
+				return this._IDCar;
+			}
+			set
+			{
+				if ((this._IDCar != value))
+				{
+					this.OnIDCarChanging(value);
+					this.SendPropertyChanging();
+					this._IDCar = value;
+					this.SendPropertyChanged("IDCar");
+					this.OnIDCarChanged();
 				}
 			}
 		}
@@ -247,26 +247,6 @@ namespace Carparking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AreaRequest", DbType="NVarChar(50)")]
-		public string AreaRequest
-		{
-			get
-			{
-				return this._AreaRequest;
-			}
-			set
-			{
-				if ((this._AreaRequest != value))
-				{
-					this.OnAreaRequestChanging(value);
-					this.SendPropertyChanging();
-					this._AreaRequest = value;
-					this.SendPropertyChanged("AreaRequest");
-					this.OnAreaRequestChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDParkRequest", DbType="Int NOT NULL")]
 		public int IDParkRequest
 		{
@@ -287,8 +267,28 @@ namespace Carparking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="Date")]
-		public System.Nullable<System.DateTime> Date
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AreaRequest", DbType="NVarChar(50)")]
+		public string AreaRequest
+		{
+			get
+			{
+				return this._AreaRequest;
+			}
+			set
+			{
+				if ((this._AreaRequest != value))
+				{
+					this.OnAreaRequestChanging(value);
+					this.SendPropertyChanging();
+					this._AreaRequest = value;
+					this.SendPropertyChanged("AreaRequest");
+					this.OnAreaRequestChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="DateTime NOT NULL")]
+		public System.DateTime Date
 		{
 			get
 			{

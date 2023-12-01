@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="qlyticket">
+  <DataContextMoniker Name="/qlyticketDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8d85e814-937f-4a2f-95c1-28e3aaa67f1c" absoluteBounds="3.25, 2, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/qlyticketDataContext/TicketDb" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aaee1c92-b8a5-4705-9a02-d0427361f635" absoluteBounds="3.265, 2.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

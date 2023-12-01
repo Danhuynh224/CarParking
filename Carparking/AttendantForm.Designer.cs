@@ -35,9 +35,9 @@
             this.parkCar_button = new System.Windows.Forms.Button();
             this.contentAtt_panel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,6 +73,7 @@
             this.ticket_button.TabIndex = 3;
             this.ticket_button.Text = "Ticket";
             this.ticket_button.UseVisualStyleBackColor = true;
+            this.ticket_button.Click += new System.EventHandler(this.ticket_button_Click);
             // 
             // parkCar_button
             // 
@@ -107,6 +108,16 @@
             this.panel2.Size = new System.Drawing.Size(212, 674);
             this.panel2.TabIndex = 8;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 358);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(212, 54);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Assist Customer";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -126,16 +137,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 358);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(212, 54);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Assist Customer";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // AttendantForm
             // 

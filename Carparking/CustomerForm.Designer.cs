@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.ticket_button = new System.Windows.Forms.Button();
-            this.parkCar_button = new System.Windows.Forms.Button();
             this.contentCus_panel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -70,17 +69,6 @@
             this.ticket_button.Text = "Parking Information";
             this.ticket_button.UseVisualStyleBackColor = true;
             // 
-            // parkCar_button
-            // 
-            this.parkCar_button.Location = new System.Drawing.Point(0, 165);
-            this.parkCar_button.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.parkCar_button.Name = "parkCar_button";
-            this.parkCar_button.Size = new System.Drawing.Size(212, 61);
-            this.parkCar_button.TabIndex = 2;
-            this.parkCar_button.Text = "Book Ticket";
-            this.parkCar_button.UseVisualStyleBackColor = true;
-            this.parkCar_button.Click += new System.EventHandler(this.parkCar_button_Click);
-            // 
             // contentCus_panel
             // 
             this.contentCus_panel.Location = new System.Drawing.Point(212, 35);
@@ -94,7 +82,6 @@
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.ticket_button);
-            this.panel2.Controls.Add(this.parkCar_button);
             this.panel2.Location = new System.Drawing.Point(0, 35);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel2.Name = "panel2";
@@ -103,7 +90,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(0, 87);
+            this.button1.Location = new System.Drawing.Point(0, 166);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(212, 54);
@@ -136,7 +123,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ticket_button;
-        private System.Windows.Forms.Button parkCar_button;
         private System.Windows.Forms.Panel contentCus_panel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;

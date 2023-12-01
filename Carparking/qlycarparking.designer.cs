@@ -135,7 +135,7 @@ namespace Carparking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Area", DbType="NChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Area", DbType="NVarChar(50)")]
 		public string Area
 		{
 			get
@@ -155,7 +155,7 @@ namespace Carparking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="NChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="NVarChar(50)")]
 		public string Status
 		{
 			get
@@ -195,7 +195,7 @@ namespace Carparking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCar", DbType="NChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCar", DbType="NVarChar(50)")]
 		public string IDCar
 		{
 			get
@@ -215,7 +215,7 @@ namespace Carparking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DatePark", DbType="Date")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DatePark", DbType="DateTime")]
 		public System.Nullable<System.DateTime> DatePark
 		{
 			get

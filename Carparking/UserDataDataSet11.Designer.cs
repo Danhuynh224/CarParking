@@ -24,7 +24,7 @@ namespace Carparking {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class UserDataDataSet1 : global::System.Data.DataSet {
         
-        private ParkingSpaceDbDataTable tableParkingSpaceDb;
+        private AttendantDbDataTable tableAttendantDb;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace Carparking {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["ParkingSpaceDb"] != null)) {
-                    base.Tables.Add(new ParkingSpaceDbDataTable(ds.Tables["ParkingSpaceDb"]));
+                if ((ds.Tables["AttendantDb"] != null)) {
+                    base.Tables.Add(new AttendantDbDataTable(ds.Tables["AttendantDb"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Carparking {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ParkingSpaceDbDataTable ParkingSpaceDb {
+        public AttendantDbDataTable AttendantDb {
             get {
-                return this.tableParkingSpaceDb;
+                return this.tableAttendantDb;
             }
         }
         
@@ -152,8 +152,8 @@ namespace Carparking {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["ParkingSpaceDb"] != null)) {
-                    base.Tables.Add(new ParkingSpaceDbDataTable(ds.Tables["ParkingSpaceDb"]));
+                if ((ds.Tables["AttendantDb"] != null)) {
+                    base.Tables.Add(new AttendantDbDataTable(ds.Tables["AttendantDb"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Carparking {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableParkingSpaceDb = ((ParkingSpaceDbDataTable)(base.Tables["ParkingSpaceDb"]));
+            this.tableAttendantDb = ((AttendantDbDataTable)(base.Tables["AttendantDb"]));
             if ((initTable == true)) {
-                if ((this.tableParkingSpaceDb != null)) {
-                    this.tableParkingSpaceDb.InitVars();
+                if ((this.tableAttendantDb != null)) {
+                    this.tableAttendantDb.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace Carparking {
             this.Namespace = "http://tempuri.org/UserDataDataSet11.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableParkingSpaceDb = new ParkingSpaceDbDataTable();
-            base.Tables.Add(this.tableParkingSpaceDb);
+            this.tableAttendantDb = new AttendantDbDataTable();
+            base.Tables.Add(this.tableAttendantDb);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeParkingSpaceDb() {
+        private bool ShouldSerializeAttendantDb() {
             return false;
         }
         
@@ -270,31 +270,31 @@ namespace Carparking {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void ParkingSpaceDbRowChangeEventHandler(object sender, ParkingSpaceDbRowChangeEvent e);
+        public delegate void AttendantDbRowChangeEventHandler(object sender, AttendantDbRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ParkingSpaceDbDataTable : global::System.Data.TypedTableBase<ParkingSpaceDbRow> {
+        public partial class AttendantDbDataTable : global::System.Data.TypedTableBase<AttendantDbRow> {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnStatus;
+            private global::System.Data.DataColumn columnFullname;
             
-            private global::System.Data.DataColumn columnPrice;
+            private global::System.Data.DataColumn columnPhone;
             
-            private global::System.Data.DataColumn columnIDCar;
+            private global::System.Data.DataColumn columnBirthday;
             
-            private global::System.Data.DataColumn columnArea;
+            private global::System.Data.DataColumn columnWorkingDay;
             
-            private global::System.Data.DataColumn columnParkedDays;
+            private global::System.Data.DataColumn columnSalary;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ParkingSpaceDbDataTable() {
-                this.TableName = "ParkingSpaceDb";
+            public AttendantDbDataTable() {
+                this.TableName = "AttendantDb";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -302,7 +302,7 @@ namespace Carparking {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ParkingSpaceDbDataTable(global::System.Data.DataTable table) {
+            internal AttendantDbDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -319,7 +319,7 @@ namespace Carparking {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected ParkingSpaceDbDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected AttendantDbDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -334,41 +334,41 @@ namespace Carparking {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn StatusColumn {
+            public global::System.Data.DataColumn FullnameColumn {
                 get {
-                    return this.columnStatus;
+                    return this.columnFullname;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PriceColumn {
+            public global::System.Data.DataColumn PhoneColumn {
                 get {
-                    return this.columnPrice;
+                    return this.columnPhone;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IDCarColumn {
+            public global::System.Data.DataColumn BirthdayColumn {
                 get {
-                    return this.columnIDCar;
+                    return this.columnBirthday;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn AreaColumn {
+            public global::System.Data.DataColumn WorkingDayColumn {
                 get {
-                    return this.columnArea;
+                    return this.columnWorkingDay;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ParkedDaysColumn {
+            public global::System.Data.DataColumn SalaryColumn {
                 get {
-                    return this.columnParkedDays;
+                    return this.columnSalary;
                 }
             }
             
@@ -383,57 +383,57 @@ namespace Carparking {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ParkingSpaceDbRow this[int index] {
+            public AttendantDbRow this[int index] {
                 get {
-                    return ((ParkingSpaceDbRow)(this.Rows[index]));
+                    return ((AttendantDbRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ParkingSpaceDbRowChangeEventHandler ParkingSpaceDbRowChanging;
+            public event AttendantDbRowChangeEventHandler AttendantDbRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ParkingSpaceDbRowChangeEventHandler ParkingSpaceDbRowChanged;
+            public event AttendantDbRowChangeEventHandler AttendantDbRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ParkingSpaceDbRowChangeEventHandler ParkingSpaceDbRowDeleting;
+            public event AttendantDbRowChangeEventHandler AttendantDbRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ParkingSpaceDbRowChangeEventHandler ParkingSpaceDbRowDeleted;
+            public event AttendantDbRowChangeEventHandler AttendantDbRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddParkingSpaceDbRow(ParkingSpaceDbRow row) {
+            public void AddAttendantDbRow(AttendantDbRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ParkingSpaceDbRow AddParkingSpaceDbRow(int ID, string Status, double Price, string IDCar, string Area, int ParkedDays) {
-                ParkingSpaceDbRow rowParkingSpaceDbRow = ((ParkingSpaceDbRow)(this.NewRow()));
+            public AttendantDbRow AddAttendantDbRow(int ID, string Fullname, string Phone, System.DateTime Birthday, int WorkingDay, double Salary) {
+                AttendantDbRow rowAttendantDbRow = ((AttendantDbRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
-                        Status,
-                        Price,
-                        IDCar,
-                        Area,
-                        ParkedDays};
-                rowParkingSpaceDbRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowParkingSpaceDbRow);
-                return rowParkingSpaceDbRow;
+                        Fullname,
+                        Phone,
+                        Birthday,
+                        WorkingDay,
+                        Salary};
+                rowAttendantDbRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowAttendantDbRow);
+                return rowAttendantDbRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ParkingSpaceDbRow FindByID(int ID) {
-                return ((ParkingSpaceDbRow)(this.Rows.Find(new object[] {
+            public AttendantDbRow FindByID(int ID) {
+                return ((AttendantDbRow)(this.Rows.Find(new object[] {
                             ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ParkingSpaceDbDataTable cln = ((ParkingSpaceDbDataTable)(base.Clone()));
+                AttendantDbDataTable cln = ((AttendantDbDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -441,18 +441,18 @@ namespace Carparking {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ParkingSpaceDbDataTable();
+                return new AttendantDbDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnStatus = base.Columns["Status"];
-                this.columnPrice = base.Columns["Price"];
-                this.columnIDCar = base.Columns["IDCar"];
-                this.columnArea = base.Columns["Area"];
-                this.columnParkedDays = base.Columns["ParkedDays"];
+                this.columnFullname = base.Columns["Fullname"];
+                this.columnPhone = base.Columns["Phone"];
+                this.columnBirthday = base.Columns["Birthday"];
+                this.columnWorkingDay = base.Columns["WorkingDay"];
+                this.columnSalary = base.Columns["Salary"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -460,49 +460,48 @@ namespace Carparking {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStatus);
-                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPrice);
-                this.columnIDCar = new global::System.Data.DataColumn("IDCar", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIDCar);
-                this.columnArea = new global::System.Data.DataColumn("Area", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnArea);
-                this.columnParkedDays = new global::System.Data.DataColumn("ParkedDays", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnParkedDays);
+                this.columnFullname = new global::System.Data.DataColumn("Fullname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFullname);
+                this.columnPhone = new global::System.Data.DataColumn("Phone", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPhone);
+                this.columnBirthday = new global::System.Data.DataColumn("Birthday", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBirthday);
+                this.columnWorkingDay = new global::System.Data.DataColumn("WorkingDay", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWorkingDay);
+                this.columnSalary = new global::System.Data.DataColumn("Salary", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSalary);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AllowDBNull = false;
                 this.columnID.Unique = true;
-                this.columnStatus.MaxLength = 10;
-                this.columnIDCar.MaxLength = 10;
-                this.columnArea.MaxLength = 10;
+                this.columnFullname.MaxLength = 50;
+                this.columnPhone.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ParkingSpaceDbRow NewParkingSpaceDbRow() {
-                return ((ParkingSpaceDbRow)(this.NewRow()));
+            public AttendantDbRow NewAttendantDbRow() {
+                return ((AttendantDbRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ParkingSpaceDbRow(builder);
+                return new AttendantDbRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ParkingSpaceDbRow);
+                return typeof(AttendantDbRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ParkingSpaceDbRowChanged != null)) {
-                    this.ParkingSpaceDbRowChanged(this, new ParkingSpaceDbRowChangeEvent(((ParkingSpaceDbRow)(e.Row)), e.Action));
+                if ((this.AttendantDbRowChanged != null)) {
+                    this.AttendantDbRowChanged(this, new AttendantDbRowChangeEvent(((AttendantDbRow)(e.Row)), e.Action));
                 }
             }
             
@@ -510,8 +509,8 @@ namespace Carparking {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ParkingSpaceDbRowChanging != null)) {
-                    this.ParkingSpaceDbRowChanging(this, new ParkingSpaceDbRowChangeEvent(((ParkingSpaceDbRow)(e.Row)), e.Action));
+                if ((this.AttendantDbRowChanging != null)) {
+                    this.AttendantDbRowChanging(this, new AttendantDbRowChangeEvent(((AttendantDbRow)(e.Row)), e.Action));
                 }
             }
             
@@ -519,8 +518,8 @@ namespace Carparking {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ParkingSpaceDbRowDeleted != null)) {
-                    this.ParkingSpaceDbRowDeleted(this, new ParkingSpaceDbRowChangeEvent(((ParkingSpaceDbRow)(e.Row)), e.Action));
+                if ((this.AttendantDbRowDeleted != null)) {
+                    this.AttendantDbRowDeleted(this, new AttendantDbRowChangeEvent(((AttendantDbRow)(e.Row)), e.Action));
                 }
             }
             
@@ -528,14 +527,14 @@ namespace Carparking {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ParkingSpaceDbRowDeleting != null)) {
-                    this.ParkingSpaceDbRowDeleting(this, new ParkingSpaceDbRowChangeEvent(((ParkingSpaceDbRow)(e.Row)), e.Action));
+                if ((this.AttendantDbRowDeleting != null)) {
+                    this.AttendantDbRowDeleting(this, new AttendantDbRowChangeEvent(((AttendantDbRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveParkingSpaceDbRow(ParkingSpaceDbRow row) {
+            public void RemoveAttendantDbRow(AttendantDbRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -562,7 +561,7 @@ namespace Carparking {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ParkingSpaceDbDataTable";
+                attribute2.FixedValue = "AttendantDbDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -606,166 +605,166 @@ namespace Carparking {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ParkingSpaceDbRow : global::System.Data.DataRow {
+        public partial class AttendantDbRow : global::System.Data.DataRow {
             
-            private ParkingSpaceDbDataTable tableParkingSpaceDb;
+            private AttendantDbDataTable tableAttendantDb;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ParkingSpaceDbRow(global::System.Data.DataRowBuilder rb) : 
+            internal AttendantDbRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableParkingSpaceDb = ((ParkingSpaceDbDataTable)(this.Table));
+                this.tableAttendantDb = ((AttendantDbDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableParkingSpaceDb.IDColumn]));
+                    return ((int)(this[this.tableAttendantDb.IDColumn]));
                 }
                 set {
-                    this[this.tableParkingSpaceDb.IDColumn] = value;
+                    this[this.tableAttendantDb.IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Status {
+            public string Fullname {
                 get {
                     try {
-                        return ((string)(this[this.tableParkingSpaceDb.StatusColumn]));
+                        return ((string)(this[this.tableAttendantDb.FullnameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Status\' in table \'ParkingSpaceDb\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fullname\' in table \'AttendantDb\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableParkingSpaceDb.StatusColumn] = value;
+                    this[this.tableAttendantDb.FullnameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double Price {
+            public string Phone {
                 get {
                     try {
-                        return ((double)(this[this.tableParkingSpaceDb.PriceColumn]));
+                        return ((string)(this[this.tableAttendantDb.PhoneColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Price\' in table \'ParkingSpaceDb\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Phone\' in table \'AttendantDb\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableParkingSpaceDb.PriceColumn] = value;
+                    this[this.tableAttendantDb.PhoneColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string IDCar {
+            public System.DateTime Birthday {
                 get {
                     try {
-                        return ((string)(this[this.tableParkingSpaceDb.IDCarColumn]));
+                        return ((global::System.DateTime)(this[this.tableAttendantDb.BirthdayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IDCar\' in table \'ParkingSpaceDb\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Birthday\' in table \'AttendantDb\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableParkingSpaceDb.IDCarColumn] = value;
+                    this[this.tableAttendantDb.BirthdayColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Area {
+            public int WorkingDay {
                 get {
                     try {
-                        return ((string)(this[this.tableParkingSpaceDb.AreaColumn]));
+                        return ((int)(this[this.tableAttendantDb.WorkingDayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Area\' in table \'ParkingSpaceDb\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'WorkingDay\' in table \'AttendantDb\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableParkingSpaceDb.AreaColumn] = value;
+                    this[this.tableAttendantDb.WorkingDayColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int ParkedDays {
+            public double Salary {
                 get {
                     try {
-                        return ((int)(this[this.tableParkingSpaceDb.ParkedDaysColumn]));
+                        return ((double)(this[this.tableAttendantDb.SalaryColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ParkedDays\' in table \'ParkingSpaceDb\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Salary\' in table \'AttendantDb\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableParkingSpaceDb.ParkedDaysColumn] = value;
+                    this[this.tableAttendantDb.SalaryColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsStatusNull() {
-                return this.IsNull(this.tableParkingSpaceDb.StatusColumn);
+            public bool IsFullnameNull() {
+                return this.IsNull(this.tableAttendantDb.FullnameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetStatusNull() {
-                this[this.tableParkingSpaceDb.StatusColumn] = global::System.Convert.DBNull;
+            public void SetFullnameNull() {
+                this[this.tableAttendantDb.FullnameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsPriceNull() {
-                return this.IsNull(this.tableParkingSpaceDb.PriceColumn);
+            public bool IsPhoneNull() {
+                return this.IsNull(this.tableAttendantDb.PhoneColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetPriceNull() {
-                this[this.tableParkingSpaceDb.PriceColumn] = global::System.Convert.DBNull;
+            public void SetPhoneNull() {
+                this[this.tableAttendantDb.PhoneColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsIDCarNull() {
-                return this.IsNull(this.tableParkingSpaceDb.IDCarColumn);
+            public bool IsBirthdayNull() {
+                return this.IsNull(this.tableAttendantDb.BirthdayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetIDCarNull() {
-                this[this.tableParkingSpaceDb.IDCarColumn] = global::System.Convert.DBNull;
+            public void SetBirthdayNull() {
+                this[this.tableAttendantDb.BirthdayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsAreaNull() {
-                return this.IsNull(this.tableParkingSpaceDb.AreaColumn);
+            public bool IsWorkingDayNull() {
+                return this.IsNull(this.tableAttendantDb.WorkingDayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetAreaNull() {
-                this[this.tableParkingSpaceDb.AreaColumn] = global::System.Convert.DBNull;
+            public void SetWorkingDayNull() {
+                this[this.tableAttendantDb.WorkingDayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsParkedDaysNull() {
-                return this.IsNull(this.tableParkingSpaceDb.ParkedDaysColumn);
+            public bool IsSalaryNull() {
+                return this.IsNull(this.tableAttendantDb.SalaryColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetParkedDaysNull() {
-                this[this.tableParkingSpaceDb.ParkedDaysColumn] = global::System.Convert.DBNull;
+            public void SetSalaryNull() {
+                this[this.tableAttendantDb.SalaryColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -773,22 +772,22 @@ namespace Carparking {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class ParkingSpaceDbRowChangeEvent : global::System.EventArgs {
+        public class AttendantDbRowChangeEvent : global::System.EventArgs {
             
-            private ParkingSpaceDbRow eventRow;
+            private AttendantDbRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ParkingSpaceDbRowChangeEvent(ParkingSpaceDbRow row, global::System.Data.DataRowAction action) {
+            public AttendantDbRowChangeEvent(AttendantDbRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ParkingSpaceDbRow Row {
+            public AttendantDbRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -816,7 +815,7 @@ namespace Carparking.UserDataDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ParkingSpaceDbTableAdapter : global::System.ComponentModel.Component {
+    public partial class AttendantDbTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -830,7 +829,7 @@ namespace Carparking.UserDataDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public ParkingSpaceDbTableAdapter() {
+        public AttendantDbTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -927,63 +926,64 @@ namespace Carparking.UserDataDataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "ParkingSpaceDb";
+            tableMapping.DataSetTable = "AttendantDb";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("Status", "Status");
-            tableMapping.ColumnMappings.Add("Price", "Price");
-            tableMapping.ColumnMappings.Add("IDCar", "IDCar");
-            tableMapping.ColumnMappings.Add("Area", "Area");
-            tableMapping.ColumnMappings.Add("ParkedDays", "ParkedDays");
+            tableMapping.ColumnMappings.Add("Fullname", "Fullname");
+            tableMapping.ColumnMappings.Add("Phone", "Phone");
+            tableMapping.ColumnMappings.Add("Birthday", "Birthday");
+            tableMapping.ColumnMappings.Add("WorkingDay", "WorkingDay");
+            tableMapping.ColumnMappings.Add("Salary", "Salary");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[ParkingSpaceDb] WHERE (([ID] = @Original_ID) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)) AND ((@IsNull_IDCar = 1 AND [IDCar] IS NULL) OR ([IDCar] = @Original_IDCar)) AND ((@IsNull_Area = 1 AND [Area] IS NULL) OR ([Area] = @Original_Area)) AND ((@IsNull_ParkedDays = 1 AND [ParkedDays] IS NULL) OR ([ParkedDays] = @Original_ParkedDays)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[AttendantDb] WHERE (([ID] = @Original_ID) AND ((@IsNull_Fullname = 1 AND [Fullname] IS NULL) OR ([Fullname] = @Original_Fullname)) AND ((@IsNull_Phone = 1 AND [Phone] IS NULL) OR ([Phone] = @Original_Phone)) AND ((@IsNull_Birthday = 1 AND [Birthday] IS NULL) OR ([Birthday] = @Original_Birthday)) AND ((@IsNull_WorkingDay = 1 AND [WorkingDay] IS NULL) OR ([WorkingDay] = @Original_WorkingDay)) AND ((@IsNull_Salary = 1 AND [Salary] IS NULL) OR ([Salary] = @Original_Salary)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IDCar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCar", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDCar", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Area", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Area", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Area", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Area", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ParkedDays", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParkedDays", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ParkedDays", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParkedDays", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fullname", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fullname", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fullname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fullname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Phone", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Phone", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Birthday", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Birthday", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Birthday", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Birthday", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_WorkingDay", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkingDay", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_WorkingDay", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkingDay", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Salary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Salary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Salary", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Salary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ParkingSpaceDb] ([ID], [Status], [Price], [IDCar], [Area], [Pa" +
-                "rkedDays]) VALUES (@ID, @Status, @Price, @IDCar, @Area, @ParkedDays);\r\nSELECT ID" +
-                ", Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID = @ID)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[AttendantDb] ([ID], [Fullname], [Phone], [Birthday], [WorkingD" +
+                "ay], [Salary]) VALUES (@ID, @Fullname, @Phone, @Birthday, @WorkingDay, @Salary);" +
+                "\r\nSELECT ID, Fullname, Phone, Birthday, WorkingDay, Salary FROM AttendantDb WHER" +
+                "E (ID = @ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCar", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Area", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Area", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ParkedDays", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParkedDays", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fullname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fullname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Phone", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Birthday", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Birthday", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WorkingDay", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkingDay", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Salary", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Salary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ParkingSpaceDb] SET [ID] = @ID, [Status] = @Status, [Price] = @Price, [IDCar] = @IDCar, [Area] = @Area, [ParkedDays] = @ParkedDays WHERE (([ID] = @Original_ID) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)) AND ((@IsNull_IDCar = 1 AND [IDCar] IS NULL) OR ([IDCar] = @Original_IDCar)) AND ((@IsNull_Area = 1 AND [Area] IS NULL) OR ([Area] = @Original_Area)) AND ((@IsNull_ParkedDays = 1 AND [ParkedDays] IS NULL) OR ([ParkedDays] = @Original_ParkedDays)));
-SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[AttendantDb] SET [ID] = @ID, [Fullname] = @Fullname, [Phone] = @Phone, [Birthday] = @Birthday, [WorkingDay] = @WorkingDay, [Salary] = @Salary WHERE (([ID] = @Original_ID) AND ((@IsNull_Fullname = 1 AND [Fullname] IS NULL) OR ([Fullname] = @Original_Fullname)) AND ((@IsNull_Phone = 1 AND [Phone] IS NULL) OR ([Phone] = @Original_Phone)) AND ((@IsNull_Birthday = 1 AND [Birthday] IS NULL) OR ([Birthday] = @Original_Birthday)) AND ((@IsNull_WorkingDay = 1 AND [WorkingDay] IS NULL) OR ([WorkingDay] = @Original_WorkingDay)) AND ((@IsNull_Salary = 1 AND [Salary] IS NULL) OR ([Salary] = @Original_Salary)));
+SELECT ID, Fullname, Phone, Birthday, WorkingDay, Salary FROM AttendantDb WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCar", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Area", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Area", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ParkedDays", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParkedDays", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fullname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fullname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Phone", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Birthday", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Birthday", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WorkingDay", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkingDay", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Salary", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Salary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IDCar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCar", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDCar", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Area", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Area", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Area", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Area", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ParkedDays", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParkedDays", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ParkedDays", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParkedDays", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fullname", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fullname", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fullname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fullname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Phone", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Phone", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Birthday", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Birthday", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Birthday", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Birthday", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_WorkingDay", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkingDay", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_WorkingDay", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkingDay", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Salary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Salary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Salary", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Salary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -999,7 +999,7 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM dbo.ParkingSpaceDb";
+            this._commandCollection[0].CommandText = "SELECT ID, Fullname, Phone, Birthday, WorkingDay, Salary FROM dbo.AttendantDb";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1007,7 +1007,7 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(UserDataDataSet1.ParkingSpaceDbDataTable dataTable) {
+        public virtual int Fill(UserDataDataSet1.AttendantDbDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1020,9 +1020,9 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual UserDataDataSet1.ParkingSpaceDbDataTable GetData() {
+        public virtual UserDataDataSet1.AttendantDbDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            UserDataDataSet1.ParkingSpaceDbDataTable dataTable = new UserDataDataSet1.ParkingSpaceDbDataTable();
+            UserDataDataSet1.AttendantDbDataTable dataTable = new UserDataDataSet1.AttendantDbDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1030,7 +1030,7 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(UserDataDataSet1.ParkingSpaceDbDataTable dataTable) {
+        public virtual int Update(UserDataDataSet1.AttendantDbDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -1038,7 +1038,7 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(UserDataDataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "ParkingSpaceDb");
+            return this.Adapter.Update(dataSet, "AttendantDb");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1060,43 +1060,43 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_Status, global::System.Nullable<double> Original_Price, string Original_IDCar, string Original_Area, global::System.Nullable<int> Original_ParkedDays) {
+        public virtual int Delete(int Original_ID, string Original_Fullname, string Original_Phone, global::System.Nullable<global::System.DateTime> Original_Birthday, global::System.Nullable<int> Original_WorkingDay, global::System.Nullable<double> Original_Salary) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            if ((Original_Status == null)) {
+            if ((Original_Fullname == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Status));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Fullname));
             }
-            if ((Original_Price.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_Price.Value));
-            }
-            else {
+            if ((Original_Phone == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_IDCar == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Phone));
+            }
+            if ((Original_Birthday.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_Birthday.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_IDCar));
+            if ((Original_WorkingDay.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_WorkingDay.Value));
             }
-            if ((Original_Area == null)) {
+            else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Area));
-            }
-            if ((Original_ParkedDays.HasValue == true)) {
+            if ((Original_Salary.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_ParkedDays.Value));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((double)(Original_Salary.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
@@ -1122,34 +1122,34 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID, string Status, global::System.Nullable<double> Price, string IDCar, string Area, global::System.Nullable<int> ParkedDays) {
+        public virtual int Insert(int ID, string Fullname, string Phone, global::System.Nullable<global::System.DateTime> Birthday, global::System.Nullable<int> WorkingDay, global::System.Nullable<double> Salary) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
-            if ((Status == null)) {
+            if ((Fullname == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Status));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Fullname));
             }
-            if ((Price.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((double)(Price.Value));
-            }
-            else {
+            if ((Phone == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((IDCar == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Phone));
+            }
+            if ((Birthday.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Birthday.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(IDCar));
+            if ((WorkingDay.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(WorkingDay.Value));
             }
-            if ((Area == null)) {
+            else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Area));
-            }
-            if ((ParkedDays.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(ParkedDays.Value));
+            if ((Salary.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((double)(Salary.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
@@ -1174,74 +1174,74 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID, string Status, global::System.Nullable<double> Price, string IDCar, string Area, global::System.Nullable<int> ParkedDays, int Original_ID, string Original_Status, global::System.Nullable<double> Original_Price, string Original_IDCar, string Original_Area, global::System.Nullable<int> Original_ParkedDays) {
+        public virtual int Update(int ID, string Fullname, string Phone, global::System.Nullable<global::System.DateTime> Birthday, global::System.Nullable<int> WorkingDay, global::System.Nullable<double> Salary, int Original_ID, string Original_Fullname, string Original_Phone, global::System.Nullable<global::System.DateTime> Original_Birthday, global::System.Nullable<int> Original_WorkingDay, global::System.Nullable<double> Original_Salary) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
-            if ((Status == null)) {
+            if ((Fullname == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Status));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Fullname));
             }
-            if ((Price.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(Price.Value));
-            }
-            else {
+            if ((Phone == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((IDCar == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Phone));
+            }
+            if ((Birthday.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Birthday.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(IDCar));
+            if ((WorkingDay.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(WorkingDay.Value));
             }
-            if ((Area == null)) {
+            else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Area));
-            }
-            if ((ParkedDays.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ParkedDays.Value));
+            if ((Salary.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((double)(Salary.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_ID));
-            if ((Original_Status == null)) {
+            if ((Original_Fullname == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Status));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Fullname));
             }
-            if ((Original_Price.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((double)(Original_Price.Value));
-            }
-            else {
+            if ((Original_Phone == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_IDCar == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Phone));
+            }
+            if ((Original_Birthday.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_Birthday.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_IDCar));
+            if ((Original_WorkingDay.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_WorkingDay.Value));
             }
-            if ((Original_Area == null)) {
+            else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Area));
-            }
-            if ((Original_ParkedDays.HasValue == true)) {
+            if ((Original_Salary.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_ParkedDays.Value));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((double)(Original_Salary.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
@@ -1267,8 +1267,8 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Status, global::System.Nullable<double> Price, string IDCar, string Area, global::System.Nullable<int> ParkedDays, int Original_ID, string Original_Status, global::System.Nullable<double> Original_Price, string Original_IDCar, string Original_Area, global::System.Nullable<int> Original_ParkedDays) {
-            return this.Update(Original_ID, Status, Price, IDCar, Area, ParkedDays, Original_ID, Original_Status, Original_Price, Original_IDCar, Original_Area, Original_ParkedDays);
+        public virtual int Update(string Fullname, string Phone, global::System.Nullable<global::System.DateTime> Birthday, global::System.Nullable<int> WorkingDay, global::System.Nullable<double> Salary, int Original_ID, string Original_Fullname, string Original_Phone, global::System.Nullable<global::System.DateTime> Original_Birthday, global::System.Nullable<int> Original_WorkingDay, global::System.Nullable<double> Original_Salary) {
+            return this.Update(Original_ID, Fullname, Phone, Birthday, WorkingDay, Salary, Original_ID, Original_Fullname, Original_Phone, Original_Birthday, Original_WorkingDay, Original_Salary);
         }
     }
     
@@ -1284,7 +1284,7 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
         
         private UpdateOrderOption _updateOrder;
         
-        private ParkingSpaceDbTableAdapter _parkingSpaceDbTableAdapter;
+        private AttendantDbTableAdapter _attendantDbTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1306,12 +1306,12 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ParkingSpaceDbTableAdapter ParkingSpaceDbTableAdapter {
+        public AttendantDbTableAdapter AttendantDbTableAdapter {
             get {
-                return this._parkingSpaceDbTableAdapter;
+                return this._attendantDbTableAdapter;
             }
             set {
-                this._parkingSpaceDbTableAdapter = value;
+                this._attendantDbTableAdapter = value;
             }
         }
         
@@ -1334,9 +1334,9 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._parkingSpaceDbTableAdapter != null) 
-                            && (this._parkingSpaceDbTableAdapter.Connection != null))) {
-                    return this._parkingSpaceDbTableAdapter.Connection;
+                if (((this._attendantDbTableAdapter != null) 
+                            && (this._attendantDbTableAdapter.Connection != null))) {
+                    return this._attendantDbTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1351,7 +1351,7 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._parkingSpaceDbTableAdapter != null)) {
+                if ((this._attendantDbTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1365,12 +1365,12 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(UserDataDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._parkingSpaceDbTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.ParkingSpaceDb.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._attendantDbTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.AttendantDb.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._parkingSpaceDbTableAdapter.Update(updatedRows));
+                    result = (result + this._attendantDbTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1384,11 +1384,11 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(UserDataDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._parkingSpaceDbTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.ParkingSpaceDb.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._attendantDbTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.AttendantDb.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._parkingSpaceDbTableAdapter.Update(addedRows));
+                    result = (result + this._attendantDbTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1402,11 +1402,11 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(UserDataDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._parkingSpaceDbTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ParkingSpaceDb.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._attendantDbTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.AttendantDb.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._parkingSpaceDbTableAdapter.Update(deletedRows));
+                    result = (result + this._attendantDbTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1449,8 +1449,8 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._parkingSpaceDbTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._parkingSpaceDbTableAdapter.Connection) == false))) {
+            if (((this._attendantDbTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._attendantDbTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1486,13 +1486,13 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._parkingSpaceDbTableAdapter != null)) {
-                    revertConnections.Add(this._parkingSpaceDbTableAdapter, this._parkingSpaceDbTableAdapter.Connection);
-                    this._parkingSpaceDbTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._parkingSpaceDbTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._parkingSpaceDbTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._parkingSpaceDbTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._parkingSpaceDbTableAdapter.Adapter);
+                if ((this._attendantDbTableAdapter != null)) {
+                    revertConnections.Add(this._attendantDbTableAdapter, this._attendantDbTableAdapter.Connection);
+                    this._attendantDbTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._attendantDbTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._attendantDbTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._attendantDbTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._attendantDbTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1553,9 +1553,9 @@ SELECT ID, Status, Price, IDCar, Area, ParkedDays FROM ParkingSpaceDb WHERE (ID 
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._parkingSpaceDbTableAdapter != null)) {
-                    this._parkingSpaceDbTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._parkingSpaceDbTableAdapter]));
-                    this._parkingSpaceDbTableAdapter.Transaction = null;
+                if ((this._attendantDbTableAdapter != null)) {
+                    this._attendantDbTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._attendantDbTableAdapter]));
+                    this._attendantDbTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

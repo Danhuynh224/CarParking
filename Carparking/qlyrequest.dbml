@@ -3,14 +3,14 @@
   <Table Name="dbo.ResquestDb" Member="ResquestDbs">
     <Type Name="ResquestDb">
       <Column Name="IDRequest" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="IDCustomer" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="IDCar" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDCustomer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDCar" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="CarBrand" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Color" Type="System.String" DbType="Char(10)" CanBeNull="true" />
-      <Column Name="AreaRequest" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="IDParkRequest" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AreaRequest" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

@@ -43,17 +43,17 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.userDataDataSet16 = new Carparking.UserDataDataSet16();
+            this.userDataDataSet2 = new Carparking.UserDataDataSet2();
             this.parkingSpaceDbBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.parkingSpaceDbTableAdapter = new Carparking.UserDataDataSet16TableAdapters.ParkingSpaceDbTableAdapter();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.areaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDCarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateParkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parkingSpaceDbTableAdapter = new Carparking.UserDataDataSet2TableAdapters.ParkingSpaceDbTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parkingSpaceDbBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,14 +160,14 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.areaDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.iDCarDataGridViewTextBoxColumn,
-            this.dateParkDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
             this.dataGridView1.DataSource = this.parkingSpaceDbBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 300);
+            this.dataGridView1.Location = new System.Drawing.Point(30, 289);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -190,67 +190,67 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Date";
             // 
-            // userDataDataSet16
+            // userDataDataSet2
             // 
-            this.userDataDataSet16.DataSetName = "UserDataDataSet16";
-            this.userDataDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.userDataDataSet2.DataSetName = "UserDataDataSet2";
+            this.userDataDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // parkingSpaceDbBindingSource
             // 
             this.parkingSpaceDbBindingSource.DataMember = "ParkingSpaceDb";
-            this.parkingSpaceDbBindingSource.DataSource = this.userDataDataSet16;
+            this.parkingSpaceDbBindingSource.DataSource = this.userDataDataSet2;
             // 
             // parkingSpaceDbTableAdapter
             // 
             this.parkingSpaceDbTableAdapter.ClearBeforeFill = true;
             // 
-            // iDDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
-            // areaDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.areaDataGridViewTextBoxColumn.DataPropertyName = "Area";
-            this.areaDataGridViewTextBoxColumn.HeaderText = "Area";
-            this.areaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.areaDataGridViewTextBoxColumn.Name = "areaDataGridViewTextBoxColumn";
-            this.areaDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Area";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Area";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
-            // statusDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Status";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Status";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
-            // priceDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Price";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Price";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
             // 
-            // iDCarDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn5
             // 
-            this.iDCarDataGridViewTextBoxColumn.DataPropertyName = "IDCar";
-            this.iDCarDataGridViewTextBoxColumn.HeaderText = "IDCar";
-            this.iDCarDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDCarDataGridViewTextBoxColumn.Name = "iDCarDataGridViewTextBoxColumn";
-            this.iDCarDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "IDCar";
+            this.dataGridViewTextBoxColumn5.HeaderText = "IDCar";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
             // 
-            // dateParkDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn6
             // 
-            this.dateParkDataGridViewTextBoxColumn.DataPropertyName = "DatePark";
-            this.dateParkDataGridViewTextBoxColumn.HeaderText = "DatePark";
-            this.dateParkDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateParkDataGridViewTextBoxColumn.Name = "dateParkDataGridViewTextBoxColumn";
-            this.dateParkDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "DatePark";
+            this.dataGridViewTextBoxColumn6.HeaderText = "DatePark";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 125;
             // 
             // CusRequestForm
             // 
@@ -275,7 +275,7 @@
             this.Text = "CusRequestForm";
             this.Load += new System.EventHandler(this.CusRequestForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.parkingSpaceDbBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -297,14 +297,20 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
-        private UserDataDataSet16 userDataDataSet16;
-        private System.Windows.Forms.BindingSource parkingSpaceDbBindingSource;
-        private UserDataDataSet16TableAdapters.ParkingSpaceDbTableAdapter parkingSpaceDbTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn areaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDCarDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateParkDataGridViewTextBoxColumn;
+        private UserDataDataSet2 userDataDataSet2;
+        private System.Windows.Forms.BindingSource parkingSpaceDbBindingSource;
+        private UserDataDataSet2TableAdapters.ParkingSpaceDbTableAdapter parkingSpaceDbTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }

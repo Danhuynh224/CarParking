@@ -24,8 +24,8 @@ namespace Carparking
 
         private void ManaCarParking_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'userDataDataSet13.ParkingSpaceDb' table. You can move, or remove it, as needed.
-            this.parkingSpaceDbTableAdapter.Fill(this.userDataDataSet13.ParkingSpaceDb);
+            // TODO: This line of code loads data into the 'userDataDataSet.ParkingSpaceDb' table. You can move, or remove it, as needed.
+            this.parkingSpaceDbTableAdapter.Fill(this.userDataDataSet.ParkingSpaceDb);
           
             
             space =new ParkingSpaceDb();

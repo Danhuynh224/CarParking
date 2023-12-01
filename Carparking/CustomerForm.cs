@@ -45,16 +45,6 @@ namespace Carparking
 
         }
 
-        private void parkCar_button_Click(object sender, EventArgs e)
-        {
-            if (preFormChild != null)
-            {
-                preFormChild.Close();
-            }
-            preFormChild = new CusBookTicket(customer);
-            OpenChildForm(preFormChild);
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (preFormChild != null)

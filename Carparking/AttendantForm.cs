@@ -12,11 +12,13 @@ namespace Carparking
 {
     public partial class AttendantForm : Form
     {
+        Attendant attendant;
         //Attendant attendant;
-        public AttendantForm()
+        public AttendantForm(Attendant attendant)
         {
             InitializeComponent();
-            //this.attendant = attendant;
+            this.attendant = attendant;
+           
         }
 
         private Form currentFormChild;
@@ -40,8 +42,6 @@ namespace Carparking
         }
 
 
-
-
         private void AttendantForm_Load(object sender, EventArgs e)
         {
 
@@ -53,8 +53,13 @@ namespace Carparking
             {
                 preFormChild.Close();
             }
-            preFormChild = new AttParkCar();
+            preFormChild = new AttParkCar(attendant);
             OpenChildForm(preFormChild);
+        }
+
+        private void ticket_button_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

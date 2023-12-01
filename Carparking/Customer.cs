@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Carparking
 {
@@ -38,20 +39,6 @@ namespace Carparking
             }
             return base.PrinfDetail() + carinfor;
         }
-        public void Park(Car car,int ID,DateTime datepark)
-        {
-            
-            Cars.Add(car);
-            car.addDb();
-            qlycarparkingDataContext dbcp = new qlycarparkingDataContext();
-            ParkingSpaceDb space = dbcp.ParkingSpaceDbs.Where(s => s.ID == ID).Single();
-            space.Status = "Parked";
-            space.IDCar = car.CarID;
-            space.DatePark= datepark;
-            dbcp.SubmitChanges();
-            MessageBox.Show("Park successfully");
-
-        }
 
         public void Request(Car car , string areapark, DateTime date) 
         {
@@ -59,7 +46,15 @@ namespace Carparking
             car.addDb();
             ResquestDb rq = new ResquestDb();
             qlyrequestDataContext dbrq = new qlyrequestDataContext();
-            rq.IDRequest = dbrq.ResquestDbs.Count()+1;
+            int idrq= dbrq.ResquestDbs.Count() + 1;
+            var b = dbrq.ResquestDbs.Where(s => s.IDRequest ==idrq).FirstOrDefault();
+            while (b != null)
+            {
+                idrq++;
+
+                 b = dbrq.ResquestDbs.Where(s => s.IDRequest == idrq).FirstOrDefault();
+            }
+            rq.IDRequest = idrq;
             rq.IDCustomer = car.IDUser;
             rq.CarBrand = car.CarBrand;
             rq.IDCar = car.CarID;

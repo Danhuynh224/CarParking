@@ -49,17 +49,17 @@
             this.SearchByNametextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.userDataDataSet14 = new Carparking.UserDataDataSet14();
+            this.userDataDataSet1 = new Carparking.UserDataDataSet1();
             this.attendantDbBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.attendantDbTableAdapter = new Carparking.UserDataDataSet14TableAdapters.AttendantDbTableAdapter();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.workingDayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.attendantDbTableAdapter = new Carparking.UserDataDataSet1TableAdapters.AttendantDbTableAdapter();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.attendantDbBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -228,81 +228,81 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn21,
-            this.fullnameDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn23,
-            this.workingDayDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn24});
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28,
+            this.dataGridViewTextBoxColumn29,
+            this.dataGridViewTextBoxColumn30});
             this.dataGridView1.DataSource = this.attendantDbBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(70, 386);
+            this.dataGridView1.Location = new System.Drawing.Point(70, 396);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(863, 150);
             this.dataGridView1.TabIndex = 24;
             // 
-            // userDataDataSet14
+            // userDataDataSet1
             // 
-            this.userDataDataSet14.DataSetName = "UserDataDataSet14";
-            this.userDataDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.userDataDataSet1.DataSetName = "UserDataDataSet1";
+            this.userDataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // attendantDbBindingSource
             // 
             this.attendantDbBindingSource.DataMember = "AttendantDb";
-            this.attendantDbBindingSource.DataSource = this.userDataDataSet14;
+            this.attendantDbBindingSource.DataSource = this.userDataDataSet1;
             // 
             // attendantDbTableAdapter
             // 
             this.attendantDbTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn21
+            // dataGridViewTextBoxColumn25
             // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn21.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn21.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.Width = 125;
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn25.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn25.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.Width = 125;
             // 
-            // fullnameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn26
             // 
-            this.fullnameDataGridViewTextBoxColumn.DataPropertyName = "Fullname";
-            this.fullnameDataGridViewTextBoxColumn.HeaderText = "Fullname";
-            this.fullnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fullnameDataGridViewTextBoxColumn.Name = "fullnameDataGridViewTextBoxColumn";
-            this.fullnameDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "Fullname";
+            this.dataGridViewTextBoxColumn26.HeaderText = "Fullname";
+            this.dataGridViewTextBoxColumn26.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.Width = 125;
             // 
-            // dataGridViewTextBoxColumn22
+            // dataGridViewTextBoxColumn27
             // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "Phone";
-            this.dataGridViewTextBoxColumn22.HeaderText = "Phone";
-            this.dataGridViewTextBoxColumn22.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.Width = 125;
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "Phone";
+            this.dataGridViewTextBoxColumn27.HeaderText = "Phone";
+            this.dataGridViewTextBoxColumn27.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.Width = 125;
             // 
-            // dataGridViewTextBoxColumn23
+            // dataGridViewTextBoxColumn28
             // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "Birthday";
-            this.dataGridViewTextBoxColumn23.HeaderText = "Birthday";
-            this.dataGridViewTextBoxColumn23.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.Width = 125;
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "Birthday";
+            this.dataGridViewTextBoxColumn28.HeaderText = "Birthday";
+            this.dataGridViewTextBoxColumn28.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.Width = 125;
             // 
-            // workingDayDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn29
             // 
-            this.workingDayDataGridViewTextBoxColumn.DataPropertyName = "WorkingDay";
-            this.workingDayDataGridViewTextBoxColumn.HeaderText = "WorkingDay";
-            this.workingDayDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.workingDayDataGridViewTextBoxColumn.Name = "workingDayDataGridViewTextBoxColumn";
-            this.workingDayDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "WorkingDay";
+            this.dataGridViewTextBoxColumn29.HeaderText = "WorkingDay";
+            this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.Width = 125;
             // 
-            // dataGridViewTextBoxColumn24
+            // dataGridViewTextBoxColumn30
             // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "Salary";
-            this.dataGridViewTextBoxColumn24.HeaderText = "Salary";
-            this.dataGridViewTextBoxColumn24.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.Width = 125;
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "Salary";
+            this.dataGridViewTextBoxColumn30.HeaderText = "Salary";
+            this.dataGridViewTextBoxColumn30.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.Width = 125;
             // 
             // ManaAttend
             // 
@@ -333,7 +333,7 @@
             this.Text = "ManaAttend";
             this.Load += new System.EventHandler(this.ManaAttend_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.attendantDbBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -388,14 +388,20 @@
         private System.Windows.Forms.TextBox SearchByNametextBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private UserDataDataSet14 userDataDataSet14;
-        private System.Windows.Forms.BindingSource attendantDbBindingSource;
-        private UserDataDataSet14TableAdapters.AttendantDbTableAdapter attendantDbTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.DataGridViewTextBoxColumn workingDayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private UserDataDataSet1 userDataDataSet1;
+        private System.Windows.Forms.BindingSource attendantDbBindingSource;
+        private UserDataDataSet1TableAdapters.AttendantDbTableAdapter attendantDbTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
     }
 }

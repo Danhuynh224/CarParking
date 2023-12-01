@@ -25,8 +25,8 @@ namespace Carparking
 
         private void CusRequestForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'userDataDataSet16.ParkingSpaceDb' table. You can move, or remove it, as needed.
-            this.parkingSpaceDbTableAdapter.Fill(this.userDataDataSet16.ParkingSpaceDb);
+            // TODO: This line of code loads data into the 'userDataDataSet2.ParkingSpaceDb' table. You can move, or remove it, as needed.
+            this.parkingSpaceDbTableAdapter.Fill(this.userDataDataSet2.ParkingSpaceDb);
           
             space = new ParkingSpaceDb();
             db = new qlycarparkingDataContext();
@@ -112,7 +112,7 @@ namespace Carparking
             if (checkid == true && checkarea == true)
             {
                 Car car = new Car(idcar_textbox.Text, customer.Id, carbrand_textbox.Text, color_textbox.Text, int.Parse(idpark_textbox.Text));
-                customer.Request(car, arearq_textbox.Text, dateTimePicker1.Value.Date);
+                customer.Request(car, arearq_textbox.Text, dateTimePicker1.Value);
                 CusRequestForm_Load(sender, e);
             }
             else
