@@ -40,7 +40,7 @@ namespace Carparking
             return base.PrinfDetail() + carinfor;
         }
 
-        public void Request(Car car , string areapark, DateTime date) 
+        public void Park(Car car , string areapark, DateTime date) 
         {
             Cars.Add(car);
             car.addDb();
@@ -63,6 +63,7 @@ namespace Carparking
             rq.Name = Name;
             rq.Color = car.Color;
             rq.Date = date;
+            rq.Type = "Park";
 
             if (car.ParkID != 0)
             {
@@ -74,5 +75,39 @@ namespace Carparking
             dbrq.ResquestDbs.InsertOnSubmit(rq);
             dbrq.SubmitChanges();
         }
+        public void Retrieve(Car car, string areapark, DateTime date,int idticket)
+        {
+            //Cars.Add(car);
+            //car.addDb();
+            ResquestDb rq = new ResquestDb();
+            qlyrequestDataContext dbrq = new qlyrequestDataContext();
+            int idrq = dbrq.ResquestDbs.Count() + 1;
+            var b = dbrq.ResquestDbs.Where(s => s.IDRequest == idrq).FirstOrDefault();
+            while (b != null)
+            {
+                idrq++;
+
+                b = dbrq.ResquestDbs.Where(s => s.IDRequest == idrq).FirstOrDefault();
+            }
+            rq.IDRequest = idrq;
+            rq.IDCustomer = car.IDUser;
+            rq.CarBrand = car.CarBrand;
+            rq.IDCar = car.CarID;
+            rq.IDParkRequest = car.ParkID;
+            rq.AreaRequest = areapark;
+            rq.Name = Name;
+            rq.Color = car.Color;
+            rq.Date = date;
+            rq.Type = "Retrieve";
+            dbrq.ResquestDbs.InsertOnSubmit(rq);
+            dbrq.SubmitChanges();
+            qlyticketDataContext db = new qlyticketDataContext(); 
+            TicketDb tick = db.TicketDbs.Where(s => s.TicketID == idticket).Single(); 
+            db.TicketDbs.DeleteOnSubmit(tick);
+            db.SubmitChanges();
+            
+
+        }
+
     }
 }

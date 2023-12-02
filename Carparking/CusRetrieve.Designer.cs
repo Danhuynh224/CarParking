@@ -1,6 +1,6 @@
 ﻿namespace Carparking
 {
-    partial class CuscheckTiket
+    partial class CusRetrieve
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
-            this.IdtickTextbox = new System.Windows.Forms.TextBox();
+            this.PrintButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ticketIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,29 +42,25 @@
             this.dateInDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ticketDbBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userDataDataSet5 = new Carparking.UserDataDataSet5();
-            this.ticketDbTableAdapter = new Carparking.UserDataDataSet5TableAdapters.TicketDbTableAdapter();
-            this.PrintButton = new System.Windows.Forms.Button();
+            this.userDataDataSet6 = new Carparking.UserDataDataSet6();
+            this.IdtickTextbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ticketDbTableAdapter = new Carparking.UserDataDataSet6TableAdapters.TicketDbTableAdapter();
+            this.Retrievebutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDbBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // PrintButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ticket ID:";
-            // 
-            // IdtickTextbox
-            // 
-            this.IdtickTextbox.Location = new System.Drawing.Point(107, 74);
-            this.IdtickTextbox.Name = "IdtickTextbox";
-            this.IdtickTextbox.Size = new System.Drawing.Size(100, 22);
-            this.IdtickTextbox.TabIndex = 1;
+            this.PrintButton.Location = new System.Drawing.Point(279, 47);
+            this.PrintButton.Name = "PrintButton";
+            this.PrintButton.Size = new System.Drawing.Size(75, 44);
+            this.PrintButton.TabIndex = 7;
+            this.PrintButton.Text = "Print  Detail";
+            this.PrintButton.UseVisualStyleBackColor = true;
+            this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
             // 
             // dataGridView1
             // 
@@ -83,12 +78,13 @@
             this.dateInDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.ticketDbBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(84, 166);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 263);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(645, 248);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.Size = new System.Drawing.Size(966, 272);
+            this.dataGridView1.TabIndex = 6;
             // 
             // ticketIDDataGridViewTextBoxColumn
             // 
@@ -173,42 +169,59 @@
             // ticketDbBindingSource
             // 
             this.ticketDbBindingSource.DataMember = "TicketDb";
-            this.ticketDbBindingSource.DataSource = this.userDataDataSet5;
+            this.ticketDbBindingSource.DataSource = this.userDataDataSet6;
             // 
-            // userDataDataSet5
+            // userDataDataSet6
             // 
-            this.userDataDataSet5.DataSetName = "UserDataDataSet5";
-            this.userDataDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.userDataDataSet6.DataSetName = "UserDataDataSet6";
+            this.userDataDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // IdtickTextbox
+            // 
+            this.IdtickTextbox.Location = new System.Drawing.Point(124, 61);
+            this.IdtickTextbox.Name = "IdtickTextbox";
+            this.IdtickTextbox.Size = new System.Drawing.Size(100, 22);
+            this.IdtickTextbox.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(54, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Ticket ID:";
             // 
             // ticketDbTableAdapter
             // 
             this.ticketDbTableAdapter.ClearBeforeFill = true;
             // 
-            // PrintButton
+            // Retrievebutton
             // 
-            this.PrintButton.Location = new System.Drawing.Point(274, 63);
-            this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(75, 44);
-            this.PrintButton.TabIndex = 3;
-            this.PrintButton.Text = "Print  Detail";
-            this.PrintButton.UseVisualStyleBackColor = true;
-            this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
+            this.Retrievebutton.Location = new System.Drawing.Point(388, 47);
+            this.Retrievebutton.Name = "Retrievebutton";
+            this.Retrievebutton.Size = new System.Drawing.Size(75, 44);
+            this.Retrievebutton.TabIndex = 8;
+            this.Retrievebutton.Text = "Retrieve Car";
+            this.Retrievebutton.UseVisualStyleBackColor = true;
+            this.Retrievebutton.Click += new System.EventHandler(this.Retrievebutton_Click);
             // 
-            // CuscheckTiket
+            // CusRetrieve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 477);
+            this.ClientSize = new System.Drawing.Size(966, 535);
+            this.Controls.Add(this.Retrievebutton);
             this.Controls.Add(this.PrintButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.IdtickTextbox);
             this.Controls.Add(this.label1);
-            this.Name = "CuscheckTiket";
-            this.Text = "CuscheckTiket";
-            this.Load += new System.EventHandler(this.CuscheckTiket_Load);
+            this.Name = "CusRetrieve";
+            this.Text = "CusRetrieve";
+            this.Load += new System.EventHandler(this.CusRetrieve_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDbBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,12 +229,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox IdtickTextbox;
+        private System.Windows.Forms.Button PrintButton;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private UserDataDataSet5 userDataDataSet5;
+        private System.Windows.Forms.TextBox IdtickTextbox;
+        private System.Windows.Forms.Label label1;
+        private UserDataDataSet6 userDataDataSet6;
         private System.Windows.Forms.BindingSource ticketDbBindingSource;
-        private UserDataDataSet5TableAdapters.TicketDbTableAdapter ticketDbTableAdapter;
+        private UserDataDataSet6TableAdapters.TicketDbTableAdapter ticketDbTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn ticketIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameCustomerDataGridViewTextBoxColumn;
@@ -232,6 +246,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn areaParkDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateInDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button PrintButton;
+        private System.Windows.Forms.Button Retrievebutton;
     }
 }

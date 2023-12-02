@@ -60,18 +60,24 @@
     <Compile Include="AttParkCar.Designer.cs">
       <DependentUpon>AttParkCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="AttRetrieve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttRetrieve.Designer.cs">
+      <DependentUpon>AttRetrieve.cs</DependentUpon>
+    </Compile>
     <Compile Include="Car.cs" />
-    <Compile Include="CuscheckTiket.cs">
+    <Compile Include="CusParking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CuscheckTiket.Designer.cs">
-      <DependentUpon>CuscheckTiket.cs</DependentUpon>
+    <Compile Include="CusParking.Designer.cs">
+      <DependentUpon>CusParking.cs</DependentUpon>
     </Compile>
-    <Compile Include="CusRequestForm.cs">
+    <Compile Include="CusRetrieve.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CusRequestForm.Designer.cs">
-      <DependentUpon>CusRequestForm.cs</DependentUpon>
+    <Compile Include="CusRetrieve.Designer.cs">
+      <DependentUpon>CusRetrieve.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerForm.cs">
@@ -185,10 +191,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UserDataDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UserDataDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UserDataDataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UserDataDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet7.xsd</DependentUpon>
     </Compile>
     <Compile Include="ViewReport.cs" />
     <EmbeddedResource Include="AttendantForm.resx">
@@ -197,11 +218,14 @@
     <EmbeddedResource Include="AttParkCar.resx">
       <DependentUpon>AttParkCar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CuscheckTiket.resx">
-      <DependentUpon>CuscheckTiket.cs</DependentUpon>
+    <EmbeddedResource Include="AttRetrieve.resx">
+      <DependentUpon>AttRetrieve.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CusRequestForm.resx">
-      <DependentUpon>CusRequestForm.cs</DependentUpon>
+    <EmbeddedResource Include="CusParking.resx">
+      <DependentUpon>CusParking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CusRetrieve.resx">
+      <DependentUpon>CusRetrieve.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
@@ -357,6 +381,17 @@
     <None Include="UserDataDataSet3.xss">
       <DependentUpon>UserDataDataSet3.xsd</DependentUpon>
     </None>
+    <None Include="UserDataDataSet4.xsc">
+      <DependentUpon>UserDataDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet4.xss">
+      <DependentUpon>UserDataDataSet4.xsd</DependentUpon>
+    </None>
     <None Include="UserDataDataSet5.xsc">
       <DependentUpon>UserDataDataSet5.xsd</DependentUpon>
     </None>
@@ -367,6 +402,28 @@
     </None>
     <None Include="UserDataDataSet5.xss">
       <DependentUpon>UserDataDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet6.xsc">
+      <DependentUpon>UserDataDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet6.xss">
+      <DependentUpon>UserDataDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet7.xsc">
+      <DependentUpon>UserDataDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet7.xss">
+      <DependentUpon>UserDataDataSet7.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

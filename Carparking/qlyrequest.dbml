@@ -3,6 +3,7 @@
   <Table Name="dbo.ResquestDb" Member="ResquestDbs">
     <Type Name="ResquestDb">
       <Column Name="IDRequest" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="IDCustomer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="IDCar" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />

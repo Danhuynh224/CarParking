@@ -82,6 +82,8 @@ namespace Carparking
 		
 		private int _IDRequest;
 		
+		private string _Type;
+		
 		private int _IDCustomer;
 		
 		private string _Name;
@@ -104,6 +106,8 @@ namespace Carparking
     partial void OnCreated();
     partial void OnIDRequestChanging(int value);
     partial void OnIDRequestChanged();
+    partial void OnTypeChanging(string value);
+    partial void OnTypeChanged();
     partial void OnIDCustomerChanging(int value);
     partial void OnIDCustomerChanged();
     partial void OnNameChanging(string value);
@@ -143,6 +147,26 @@ namespace Carparking
 					this._IDRequest = value;
 					this.SendPropertyChanged("IDRequest");
 					this.OnIDRequestChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Type", DbType="NVarChar(50)")]
+		public string Type
+		{
+			get
+			{
+				return this._Type;
+			}
+			set
+			{
+				if ((this._Type != value))
+				{
+					this.OnTypeChanging(value);
+					this.SendPropertyChanging();
+					this._Type = value;
+					this.SendPropertyChanged("Type");
+					this.OnTypeChanged();
 				}
 			}
 		}

@@ -11,13 +11,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Carparking
 {
-    public partial class CusRequestForm : Form
+    public partial class CusParking : Form
     {
         ParkingSpaceDb space;
         Customer customer;
         qlycarparkingDataContext db;
 
-        public CusRequestForm(Customer customer)
+        public CusParking(Customer customer)
         {
             this.customer = customer;
             InitializeComponent();
@@ -112,7 +112,7 @@ namespace Carparking
             if (checkid == true && checkarea == true)
             {
                 Car car = new Car(idcar_textbox.Text, customer.Id, carbrand_textbox.Text, color_textbox.Text, int.Parse(idpark_textbox.Text));
-                customer.Request(car, arearq_textbox.Text, dateTimePicker1.Value);
+                customer.Park(car, arearq_textbox.Text, dateTimePicker1.Value);
                 CusRequestForm_Load(sender, e);
             }
             else

@@ -1,6 +1,6 @@
 ﻿namespace Carparking
 {
-    partial class CusRequestForm
+    partial class CusParking
     {
         /// <summary>
         /// Required designer variable.
@@ -41,20 +41,20 @@
             this.label6 = new System.Windows.Forms.Label();
             this.sendreq_button = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.userDataDataSet2 = new Carparking.UserDataDataSet2();
-            this.parkingSpaceDbBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.parkingSpaceDbTableAdapter = new Carparking.UserDataDataSet2TableAdapters.ParkingSpaceDbTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parkingSpaceDbBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userDataDataSet2 = new Carparking.UserDataDataSet2();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.parkingSpaceDbTableAdapter = new Carparking.UserDataDataSet2TableAdapters.ParkingSpaceDbTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parkingSpaceDbBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // idcar_textbox
@@ -167,42 +167,12 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.dataGridView1.DataSource = this.parkingSpaceDbBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 289);
+            this.dataGridView1.Location = new System.Drawing.Point(49, 289);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(801, 244);
             this.dataGridView1.TabIndex = 13;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(182, 192);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(240, 22);
-            this.dateTimePicker1.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(80, 198);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 16);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Date";
-            // 
-            // userDataDataSet2
-            // 
-            this.userDataDataSet2.DataSetName = "UserDataDataSet2";
-            this.userDataDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // parkingSpaceDbBindingSource
-            // 
-            this.parkingSpaceDbBindingSource.DataMember = "ParkingSpaceDb";
-            this.parkingSpaceDbBindingSource.DataSource = this.userDataDataSet2;
-            // 
-            // parkingSpaceDbTableAdapter
-            // 
-            this.parkingSpaceDbTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -252,7 +222,37 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Width = 125;
             // 
-            // CusRequestForm
+            // parkingSpaceDbBindingSource
+            // 
+            this.parkingSpaceDbBindingSource.DataMember = "ParkingSpaceDb";
+            this.parkingSpaceDbBindingSource.DataSource = this.userDataDataSet2;
+            // 
+            // userDataDataSet2
+            // 
+            this.userDataDataSet2.DataSetName = "UserDataDataSet2";
+            this.userDataDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(182, 192);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(240, 22);
+            this.dateTimePicker1.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(80, 198);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(36, 16);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Date";
+            // 
+            // parkingSpaceDbTableAdapter
+            // 
+            this.parkingSpaceDbTableAdapter.ClearBeforeFill = true;
+            // 
+            // CusParking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -271,12 +271,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.idcar_textbox);
             this.Controls.Add(this.label2);
-            this.Name = "CusRequestForm";
+            this.Name = "CusParking";
             this.Text = "CusRequestForm";
             this.Load += new System.EventHandler(this.CusRequestForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.parkingSpaceDbBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

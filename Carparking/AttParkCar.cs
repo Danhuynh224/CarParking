@@ -24,13 +24,15 @@ namespace Carparking
 
         private void AttParkCar_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'userDataDataSet3.ResquestDb' table. You can move, or remove it, as needed.
-            this.resquestDbTableAdapter.Fill(this.userDataDataSet3.ResquestDb);
+            // TODO: This line of code loads data into the 'userDataDataSet4.ResquestDb' table. You can move, or remove it, as needed.
+            this.resquestDbTableAdapter.Fill(this.userDataDataSet4.ResquestDb);
+           
         
             resquest = new ResquestDb();
             dbrq = new qlyrequestDataContext();
-            var list = (from s in dbrq.ResquestDbs select s).ToList();
+            var list = (from s in dbrq.ResquestDbs where s.Type=="Park" select s).ToList();
             dataGridView1.DataSource = list;
+            dataGridView1.Columns[1].Visible = false;
 
         }
 

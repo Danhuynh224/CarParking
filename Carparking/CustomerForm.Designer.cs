@@ -66,7 +66,7 @@
             this.ticket_button.Name = "ticket_button";
             this.ticket_button.Size = new System.Drawing.Size(212, 54);
             this.ticket_button.TabIndex = 3;
-            this.ticket_button.Text = "My ticket";
+            this.ticket_button.Text = "Retrieve Car";
             this.ticket_button.UseVisualStyleBackColor = true;
             this.ticket_button.Click += new System.EventHandler(this.ticket_button_Click);
             // 
@@ -96,7 +96,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(212, 54);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Requestment";
+            this.button1.Text = "Park Car";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

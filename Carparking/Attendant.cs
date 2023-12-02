@@ -36,10 +36,6 @@ namespace Carparking
             space.DatePark = datepark;
             dbcp.SubmitChanges();
             MessageBox.Show("Park successfully");
-            qlyrequestDataContext dbrq= new qlyrequestDataContext();
-            ResquestDb resquest = dbrq.ResquestDbs.Where(s => s.IDRequest == IDrequest).Single();
-            dbrq.SubmitChanges();
-
         }
         public void Park(int IDrequest, string carID, string area, DateTime datepark)
         {
@@ -126,6 +122,25 @@ namespace Carparking
             dbrq.ResquestDbs.DeleteOnSubmit(resquest);
             dbrq.SubmitChanges();
 
+        }
+        public void Retrieve(int IDrequest, string carID, int ID)
+        {
+
+            qlycarparkingDataContext dbcp = new qlycarparkingDataContext();
+            ParkingSpaceDb space = dbcp.ParkingSpaceDbs.Where(s => s.ID == ID).Single();
+            space.Status = "Empty";
+            space.IDCar = "";
+            space.DatePark = null;
+            dbcp.SubmitChanges();
+            MessageBox.Show("Retrieve successfully");
+            qlyrequestDataContext dbrq = new qlyrequestDataContext();
+            ResquestDb resquest = dbrq.ResquestDbs.Where(s => s.IDRequest == IDrequest).Single();
+            qlyCarDataContext dbc=new qlyCarDataContext();
+            CarDb cardb=dbc.CarDbs.Where(s=>s.CarID==carID).Single();
+            dbc.CarDbs.DeleteOnSubmit(cardb); 
+            dbc.SubmitChanges();
+            dbrq.ResquestDbs.DeleteOnSubmit(resquest);
+            dbrq.SubmitChanges();
         }
         public override string PrinfDetail()
         {

@@ -51,7 +51,7 @@ namespace Carparking
             {
                 preFormChild.Close();
             }
-            preFormChild = new CusRequestForm(customer);
+            preFormChild = new CusParking(customer);
             OpenChildForm(preFormChild);
         }
 
@@ -61,7 +61,7 @@ namespace Carparking
             {
                 preFormChild.Close();
             }
-            preFormChild = new CuscheckTiket(customer);
+            preFormChild = new CusRetrieve(customer);
             OpenChildForm(preFormChild);
         }
     }

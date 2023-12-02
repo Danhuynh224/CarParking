@@ -57,9 +57,14 @@ namespace Carparking
             OpenChildForm(preFormChild);
         }
 
-        private void ticket_button_Click(object sender, EventArgs e)
+        private void retrieve_button_Click(object sender, EventArgs e)
         {
-
+            if (preFormChild != null)
+            {
+                preFormChild.Close();
+            }
+            preFormChild = new AttRetrieve(attendant);
+            OpenChildForm(preFormChild);
         }
     }
 }

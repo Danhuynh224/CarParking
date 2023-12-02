@@ -33,10 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.AssistButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.userDataDataSet3 = new Carparking.UserDataDataSet3();
-            this.resquestDbBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.resquestDbTableAdapter = new Carparking.UserDataDataSet3TableAdapters.ResquestDbTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,9 +43,12 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resquestDbBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userDataDataSet4 = new Carparking.UserDataDataSet4();
+            this.resquestDbTableAdapter = new Carparking.UserDataDataSet4TableAdapters.ResquestDbTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resquestDbBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // IDrequesttextBox
@@ -69,7 +70,7 @@
             // 
             // AssistButton
             // 
-            this.AssistButton.Location = new System.Drawing.Point(415, 82);
+            this.AssistButton.Location = new System.Drawing.Point(385, 77);
             this.AssistButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AssistButton.Name = "AssistButton";
             this.AssistButton.Size = new System.Drawing.Size(145, 32);
@@ -84,6 +85,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
+            this.typeDataGridViewTextBoxColumn,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
@@ -93,26 +95,12 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.dataGridView1.DataSource = this.resquestDbBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 253);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 299);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(1246, 202);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // userDataDataSet3
-            // 
-            this.userDataDataSet3.DataSetName = "UserDataDataSet3";
-            this.userDataDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // resquestDbBindingSource
-            // 
-            this.resquestDbBindingSource.DataMember = "ResquestDb";
-            this.resquestDbBindingSource.DataSource = this.userDataDataSet3;
-            // 
-            // resquestDbTableAdapter
-            // 
-            this.resquestDbTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -121,6 +109,14 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -186,6 +182,20 @@
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.Width = 125;
             // 
+            // resquestDbBindingSource
+            // 
+            this.resquestDbBindingSource.DataMember = "ResquestDb";
+            this.resquestDbBindingSource.DataSource = this.userDataDataSet4;
+            // 
+            // userDataDataSet4
+            // 
+            this.userDataDataSet4.DataSetName = "UserDataDataSet4";
+            this.userDataDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // resquestDbTableAdapter
+            // 
+            this.resquestDbTableAdapter.ClearBeforeFill = true;
+            // 
             // AttParkCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -200,8 +210,8 @@
             this.Text = "AttParkCar";
             this.Load += new System.EventHandler(this.AttParkCar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resquestDbBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,10 +231,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iDParkRequestDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn areaRequestDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private UserDataDataSet3 userDataDataSet3;
+        private UserDataDataSet4 userDataDataSet4;
         private System.Windows.Forms.BindingSource resquestDbBindingSource;
-        private UserDataDataSet3TableAdapters.ResquestDbTableAdapter resquestDbTableAdapter;
+        private UserDataDataSet4TableAdapters.ResquestDbTableAdapter resquestDbTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;

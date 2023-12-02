@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AttendantForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.ticket_button = new System.Windows.Forms.Button();
+            this.retrieve_button = new System.Windows.Forms.Button();
             this.parkCar_button = new System.Windows.Forms.Button();
             this.contentAtt_panel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -64,16 +64,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "WELCOME ATTENDANT | CAR PARKING MANAGEMENT SYSTEM";
             // 
-            // ticket_button
+            // retrieve_button
             // 
-            this.ticket_button.Location = new System.Drawing.Point(0, 298);
-            this.ticket_button.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.ticket_button.Name = "ticket_button";
-            this.ticket_button.Size = new System.Drawing.Size(212, 54);
-            this.ticket_button.TabIndex = 3;
-            this.ticket_button.Text = "Ticket";
-            this.ticket_button.UseVisualStyleBackColor = true;
-            this.ticket_button.Click += new System.EventHandler(this.ticket_button_Click);
+            this.retrieve_button.Location = new System.Drawing.Point(0, 298);
+            this.retrieve_button.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.retrieve_button.Name = "retrieve_button";
+            this.retrieve_button.Size = new System.Drawing.Size(212, 54);
+            this.retrieve_button.TabIndex = 3;
+            this.retrieve_button.Text = "Retrieve Car";
+            this.retrieve_button.UseVisualStyleBackColor = true;
+            this.retrieve_button.Click += new System.EventHandler(this.retrieve_button_Click);
             // 
             // parkCar_button
             // 
@@ -100,7 +100,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.ticket_button);
+            this.panel2.Controls.Add(this.retrieve_button);
             this.panel2.Controls.Add(this.parkCar_button);
             this.panel2.Location = new System.Drawing.Point(0, 35);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -163,7 +163,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button ticket_button;
+        private System.Windows.Forms.Button retrieve_button;
         private System.Windows.Forms.Button parkCar_button;
         private System.Windows.Forms.Panel contentAtt_panel;
         private System.Windows.Forms.Panel panel2;
