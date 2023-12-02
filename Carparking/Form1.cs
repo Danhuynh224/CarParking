@@ -182,7 +182,7 @@ namespace Carparking
                             }
                             customerDb.ID = id;
                             user.ID= customerDb.ID; 
-                            customerDb.Fullname = user.Username;
+                            customerDb.Fullname = user.Fullname;
                             customerDb.Phone = user.NumberPhone;
                             dbct.CustomerDbs.InsertOnSubmit(customerDb);
                             dbct.SubmitChanges();

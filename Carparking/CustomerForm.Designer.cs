@@ -66,8 +66,9 @@
             this.ticket_button.Name = "ticket_button";
             this.ticket_button.Size = new System.Drawing.Size(212, 54);
             this.ticket_button.TabIndex = 3;
-            this.ticket_button.Text = "Parking Information";
+            this.ticket_button.Text = "My ticket";
             this.ticket_button.UseVisualStyleBackColor = true;
+            this.ticket_button.Click += new System.EventHandler(this.ticket_button_Click);
             // 
             // contentCus_panel
             // 
