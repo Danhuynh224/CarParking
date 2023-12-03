@@ -34,6 +34,7 @@
             this.contentCus_panel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.pay_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -81,6 +82,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.pay_button);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.ticket_button);
             this.panel2.Location = new System.Drawing.Point(0, 35);
@@ -99,6 +101,17 @@
             this.button1.Text = "Park Car";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pay_button
+            // 
+            this.pay_button.Location = new System.Drawing.Point(0, 304);
+            this.pay_button.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pay_button.Name = "pay_button";
+            this.pay_button.Size = new System.Drawing.Size(212, 54);
+            this.pay_button.TabIndex = 5;
+            this.pay_button.Text = "Handle Payment";
+            this.pay_button.UseVisualStyleBackColor = true;
+            this.pay_button.Click += new System.EventHandler(this.pay_button_Click);
             // 
             // CustomerForm
             // 
@@ -127,5 +140,6 @@
         private System.Windows.Forms.Panel contentCus_panel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button pay_button;
     }
 }

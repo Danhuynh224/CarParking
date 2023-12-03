@@ -42,7 +42,6 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resquestDbBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userDataDataSet7 = new Carparking.UserDataDataSet7();
-            this.label2 = new System.Windows.Forms.Label();
             this.AssistButton = new System.Windows.Forms.Button();
             this.IDrequesttextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -165,15 +164,6 @@
             this.userDataDataSet7.DataSetName = "UserDataDataSet7";
             this.userDataDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(-95, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Select Request";
-            // 
             // AssistButton
             // 
             this.AssistButton.Location = new System.Drawing.Point(323, 62);
@@ -215,7 +205,6 @@
             this.Controls.Add(this.IDrequesttextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label2);
             this.Name = "AttRetrieve";
             this.Text = "AttRetrieve";
             this.Load += new System.EventHandler(this.AttRetrieve_Load);
@@ -230,7 +219,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button AssistButton;
         private System.Windows.Forms.TextBox IDrequesttextBox;
         private System.Windows.Forms.Label label1;

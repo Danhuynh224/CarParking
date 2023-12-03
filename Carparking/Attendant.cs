@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
@@ -139,9 +140,61 @@ namespace Carparking
             CarDb cardb=dbc.CarDbs.Where(s=>s.CarID==carID).Single();
             dbc.CarDbs.DeleteOnSubmit(cardb); 
             dbc.SubmitChanges();
-            dbrq.ResquestDbs.DeleteOnSubmit(resquest);
+            //dbrq.ResquestDbs.DeleteOnSubmit(resquest);
+            //dbrq.SubmitChanges();
+        }
+
+
+        public void issueReceipt(int idRequest, string paymethod)
+        {
+            MessageBox.Show("Receipt");
+            qlyrequestDataContext dbrq = new qlyrequestDataContext();
+            ResquestDb request = dbrq.ResquestDbs.Where(s => s.IDRequest == idRequest).Single();
+
+            qlycarparkingDataContext dbcp = new qlycarparkingDataContext();
+            ParkingSpaceDb space = dbcp.ParkingSpaceDbs.Where(s => s.ID == request.IDParkRequest).Single();
+
+            qlyreceiptDataContext db = new qlyreceiptDataContext();
+            ReceiptDb receipt = new ReceiptDb();
+
+            int idrp = db.ReceiptDbs.Count() + 1;
+            var b = db.ReceiptDbs.Where(s => s.IDReceipt == idrp).FirstOrDefault();
+            while (b != null)
+            {
+                idrp++;
+                b = db.ReceiptDbs.Where(s => s.IDReceipt == idrp).FirstOrDefault();
+            }
+
+            //Gio co dinh
+            float priceperhour = float.Parse(space.Price.ToString());
+            receipt.IDReceipt = idrp;
+            receipt.IDUser = request.IDCustomer;
+            receipt.NameUser = request.Name;
+            receipt.IDPark = request.IDParkRequest;
+            receipt.AreaPark = request.AreaRequest;
+            receipt.IDCar = request.IDCar;
+            receipt.Brand = request.CarBrand;
+            receipt.Color = request.Color;
+            receipt.DateIn = request.Date;
+            receipt.DateOut = DateTime.Now;
+            receipt.Status = "UnPaid";
+            receipt.PaymentMethod = paymethod;
+            //Thoigian
+            TimeSpan duration = receipt.DateOut - receipt.DateIn;
+            double totalHours = duration.TotalHours;
+
+            receipt.Price = Math.Round(totalHours * priceperhour, 2);
+            MessageBox.Show(receipt.Price.ToString());
+            Receipt rept = new Receipt(receipt.IDReceipt,receipt.Status, receipt.IDUser, receipt.NameUser, receipt.IDPark, receipt.AreaPark,
+                receipt.IDCar, receipt.Brand, receipt.Color, receipt.DateIn, receipt.DateOut, 
+                receipt.PaymentMethod, float.Parse(receipt.Price.ToString()));
+            //tick.openTicket();
+            db.ReceiptDbs.InsertOnSubmit(receipt);
+            db.SubmitChanges();
+            dbrq.ResquestDbs.DeleteOnSubmit(request);
             dbrq.SubmitChanges();
         }
+
         public override string PrinfDetail()
         {
             return base.PrinfDetail()  + "\nSalary: " +salary;

@@ -64,5 +64,15 @@ namespace Carparking
             preFormChild = new CusRetrieve(customer);
             OpenChildForm(preFormChild);
         }
+
+        private void pay_button_Click(object sender, EventArgs e)
+        {
+            if (preFormChild != null)
+            {
+                preFormChild.Close();
+            }
+            preFormChild = new HandlePaymentForm(customer);
+            OpenChildForm(preFormChild);
+        }
     }
 }

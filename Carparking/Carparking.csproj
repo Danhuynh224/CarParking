@@ -93,6 +93,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="HandlePayment.cs" />
+    <Compile Include="HandlePaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HandlePaymentForm.Designer.cs">
+      <DependentUpon>HandlePaymentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManaAttend.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>qlymanager.dbml</DependentUpon>
     </Compile>
+    <Compile Include="qlyreceipt.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qlyreceipt.dbml</DependentUpon>
+    </Compile>
     <Compile Include="qlyrequest.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -162,6 +173,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>qlyuserlogin.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Receipt.cs" />
+    <Compile Include="ReceiptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiptForm.Designer.cs">
+      <DependentUpon>ReceiptForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RetrieveCar.cs" />
     <Compile Include="Ticket.cs" />
@@ -211,6 +229,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UserDataDataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UserDataDataSet81.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet81.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ViewReport.cs" />
     <EmbeddedResource Include="AttendantForm.resx">
       <DependentUpon>AttendantForm.cs</DependentUpon>
@@ -233,6 +256,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HandlePaymentForm.resx">
+      <DependentUpon>HandlePaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManaAttend.resx">
       <DependentUpon>ManaAttend.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +278,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReceiptForm.resx">
+      <DependentUpon>ReceiptForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TicketForm.resx">
       <DependentUpon>TicketForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,6 +341,14 @@
     </None>
     <None Include="qlymanager.dbml.layout">
       <DependentUpon>qlymanager.dbml</DependentUpon>
+    </None>
+    <None Include="qlyreceipt.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>qlyreceipt.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qlyreceipt.dbml.layout">
+      <DependentUpon>qlyreceipt.dbml</DependentUpon>
     </None>
     <None Include="qlyrequest.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -424,6 +461,17 @@
     </None>
     <None Include="UserDataDataSet7.xss">
       <DependentUpon>UserDataDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet81.xsc">
+      <DependentUpon>UserDataDataSet81.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet81.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet81.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet81.xss">
+      <DependentUpon>UserDataDataSet81.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

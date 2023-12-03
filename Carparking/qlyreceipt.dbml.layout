@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="qlyreceipt">
+  <DataContextMoniker Name="/qlyreceiptDataContext" />
+  <nestedChildShapes>
+    <classShape Id="14ec721c-ebb5-479a-b3e2-66c9f05a9567" absoluteBounds="3.125, 1.875, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/qlyreceiptDataContext/ReceiptDb" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90bb1642-e312-43c1-b24f-af52eff17736" absoluteBounds="3.14, 2.335, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

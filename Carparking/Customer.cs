@@ -108,6 +108,16 @@ namespace Carparking
             
 
         }
+        public void HandlePayment(Receipt receipt,string payment)
+        {
+            qlyreceiptDataContext dbrp = new qlyreceiptDataContext();
+            ReceiptDb receiptdb = dbrp.ReceiptDbs.Where(s => s.IDReceipt == receipt.Id).Single();
+            receipt.PayMethod = payment;
+            receiptdb.PaymentMethod = payment;
+            receipt.openReceipt();
+            receiptdb.Status = "Paid";
+            dbrp.SubmitChanges();
+        }
 
     }
 }

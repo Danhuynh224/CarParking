@@ -198,7 +198,7 @@
             // 
             // Retrievebutton
             // 
-            this.Retrievebutton.Location = new System.Drawing.Point(388, 47);
+            this.Retrievebutton.Location = new System.Drawing.Point(467, 50);
             this.Retrievebutton.Name = "Retrievebutton";
             this.Retrievebutton.Size = new System.Drawing.Size(75, 44);
             this.Retrievebutton.TabIndex = 8;

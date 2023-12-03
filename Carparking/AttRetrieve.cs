@@ -36,10 +36,11 @@ namespace Carparking
         private void AssistButton_Click(object sender, EventArgs e)
         {
             dbrq = new qlyrequestDataContext();
-            MessageBox.Show(IDrequesttextBox.Text);
-            resquest = dbrq.ResquestDbs.Where(s => s.IDRequest == int.Parse(IDrequesttextBox.Text)).Single();
             
+            resquest = dbrq.ResquestDbs.Where(s => s.IDRequest == int.Parse(IDrequesttextBox.Text)).Single();
+            MessageBox.Show("kkkkk");
             attendant.Retrieve(resquest.IDRequest, resquest.IDCar, resquest.IDParkRequest);
+            attendant.issueReceipt(resquest.IDRequest, "N/A");
             AttRetrieve_Load(sender, e);    
         }
     }
